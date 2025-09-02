@@ -1,0 +1,95 @@
+// components/MobileMenu.js
+"use client";
+
+import { useEffect } from "react";
+import Link from "next/link";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: '--font-montserrat',
+});
+
+export default function MobileMenu({ open, onClose, nav }) {
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [open]);
+
+  if (!open) {
+    return null;
+  }
+
+  return (
+    <div
+      className="md:hidden fixed inset-0 z-50 flex justify-end"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="menu-heading"
+    >
+      <div
+        className="fixed inset-0 bg-black/30 transition-opacity duration-300 ease-in-out"
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      
+      <div
+        className={`relative w-[75vw] max-w-sm h-full bg-white shadow-xl transform transition-transform duration-300 ease-out ${open ? "translate-x-0" : "translate-x-full"} flex flex-col`}
+      >
+        {/* HEADER: Values are calibrated to match your design at 375px width. */}
+        <header className={`flex-shrink-0 flex items-center justify-between border-b-5 border-[#031E41] p-[clamp(1.75rem,4.4vw,1.65rem)]`}>
+          <h2
+            id="menu-heading"
+            className={`${montserrat.className} font-bold text-[#16469D] text-[clamp(1.1rem,3.6vw,1.35rem)]`}
+          >
+            MENU
+          </h2>
+          <button
+            onClick={onClose}
+            aria-label="Close menu"
+            className="p-2 rounded-full transition-colors duration-200 hover:bg-gray-300"
+          >
+            {/* SVG is also calibrated for consistency */}
+            <svg className="h-[clamp(1.6rem,4.8vw,2rem)] w-[clamp(2.4rem,7.2vw,3rem)]" viewBox="0 0 77 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd" clipRule="evenodd" d="M0.5 3.3039V0.00852752L76.3846 46.1413V49.4366L0.5 3.3039ZM0.5 46.1413L76.3846 0.00585938V3.30124L0.5 49.4367V46.1413Z" fill="#16469D" />
+            </svg>
+          </button>
+        </header>
+
+        {/* NAVIGATION: Calibrated for scrolling and fluid text/padding. */}
+        <nav className={`flex-grow overflow-y-auto px-[clamp(1.2rem,4vw,1.5rem)] py-[clamp(1.7rem,5.3vw,2rem)]`}>
+          <ul className="space-y-4">
+            {nav?.map((item) => (
+              <li key={item.href} className="border-b-2 border-black">
+                <Link
+                  href={item.href}
+                  onClick={onClose}
+                  className={`${montserrat.className} block font-bold text-[#16469D] hover:bg-gray-300/50 rounded-lg transition-colors duration-200
+                              text-[clamp(1.1rem,3.6vw,1.35rem)]
+                              py-[clamp(0.6rem,2.1vw,0.8rem)]`}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* FOOTER: Calibrated for smaller text. */}
+        <footer className={`flex-shrink-0 p-[clamp(1.25rem,4.4vw,1.65rem)] border-t-1 border-black`}>
+          <div className={`${montserrat.className} font-light text-[#16469D] text-[clamp(0.7rem,2.5vw,0.85rem)] space-y-1`}>
+            <a href="tel:305-333-2417" className="block hover:underline">Phone: (305) 333-2417</a>
+            <a href="mailto:info@apmrestaurantgroup.com" className="block hover:underline">Email: info@apmrestaurantgroup.com</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  );
+}
