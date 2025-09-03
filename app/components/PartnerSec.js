@@ -14,7 +14,7 @@ export default function PartnerSec() {
             <div className="relative w-full" style={{ aspectRatio: "974 / 1130" }}>
               <Image
                 src="/masa.webp"
-                alt="Álvaro Perez Miranda"
+                alt="Alvaro Perez Miranda"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"

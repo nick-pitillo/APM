@@ -9,7 +9,7 @@ import { DEFAULT_NAV } from "./Navbar";
 
 export default function MobileNavbar({
   nav = DEFAULT_NAV,
-  mobileLogo = { src: "/logomobile.png", width: 268, height: 261, alt: "APM" },
+  mobileLogo = { src: "/logoext.png", width: 268, height: 261, alt: "APM" },
 }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -22,7 +22,7 @@ export default function MobileNavbar({
   }, []);
 
   return (
-    <div className="md:hidden w-full bg-white border-b-[5.54px] border-[#031E41] h-[5%] lg:h-[clamp(100px,12vh,140px)] flex items-center">
+    <div className="md:hidden w-full bg-white border-b-[2.54px] border-[#031E41] h-[5%] lg:h-[clamp(100px,12vh,140px)] flex items-center">
     
       <div className="flex items-center justify-between px-5 w-full">
         <Image
@@ -30,7 +30,7 @@ export default function MobileNavbar({
           alt={mobileLogo.alt ?? "Logo"}
           width={mobileLogo.width}
           height={mobileLogo.height}
-          className="h-[clamp(98px,5vh,120px)] w-auto select-none object-contain"
+          className="h-[clamp(98px,5vh,120px)] w-auto select-none object-contain py-4"
         />
         <button
           type="button"

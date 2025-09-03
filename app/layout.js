@@ -18,7 +18,7 @@ export const metadata = {
     template: '%s | APM Restaurant Group'
   },
   description:
-    'APM Restaurant Group is a Miami-based collection of award-winning Japanese restaurants, including the MICHELIN-starred Ogawa, led by founder Álvaro Pérez Miranda. We bring omotenashi, precision, and sensibility to every dining experience.',
+    'APM Restaurant Group is a Miami-based collection of award-winning Japanese restaurants, including the MICHELIN-starred Ogawa, led by founder Alvaro Perez Miranda. We bring omotenashi, precision, and sensibility to every dining experience.',
   keywords: [
     'APM Restaurant Group',
     'Miami restaurants',
@@ -29,7 +29,7 @@ export const metadata = {
     'Midorie',
     'Kuri Kuri',
     'Masayuki',
-    'Álvaro Pérez Miranda'
+    'Alvaro Perez Miranda'
   ],
   authors: [
     { name: 'APM Restaurant Group' },
@@ -43,7 +43,7 @@ export const metadata = {
   openGraph: {
     title: 'APM Restaurant Group | Miami Japanese Restaurants',
     description:
-      'Award-winning Japanese restaurants in Miami led by Álvaro Pérez Miranda, including the MICHELIN-starred Ogawa. Experience omotenashi, precision, and sensibility.',
+      'Award-winning Japanese restaurants in Miami led by Alvaro Perez Miranda, including the MICHELIN-starred Ogawa. Experience omotenashi, precision, and sensibility.',
     url: 'https://apmrestaurantgroup.com/',
     siteName: 'APM Restaurant Group',
     images: [
@@ -61,7 +61,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'APM Restaurant Group | Miami Japanese Restaurants',
     description:
-      'Award-winning Japanese restaurants in Miami led by Álvaro Pérez Miranda, including the MICHELIN-starred Ogawa.',
+      'Award-winning Japanese restaurants in Miami led by Alvaro Perez Miranda, including the MICHELIN-starred Ogawa.',
     images: ['/apm.jpeg']
   },
   icons: {
@@ -111,7 +111,7 @@ export default function RootLayout({ children }) {
             ],
             founder: {
               '@type': 'Person',
-              name: 'Álvaro Pérez Miranda'
+              name: 'Alvaro Perez Miranda'
             }
           })}
         </Script>

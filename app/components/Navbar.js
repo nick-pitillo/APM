@@ -6,11 +6,11 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Montserrat } from "next/font/google";
 
-const montserrat = Montserrat({ weight: ["700"], subsets: ["latin"], display: "swap" });
+const montserrat = Montserrat({ weight: ["300"], subsets: ["latin"], display: "swap" });
 
 export const DEFAULT_NAV = [
   { label: "ABOUT", href: "/about" },
-  { label: "RESTAURANTS", href: "/" },
+  { label: "RESTAURANTS", href: "/restaurants" },
   { label: "PRESS", href: "/press" },
   { label: "CAREER", href: "/career" },
   { label: "CONTACT", href: "/contact" },
@@ -18,7 +18,7 @@ export const DEFAULT_NAV = [
 
 export default function Navbar({
   nav = DEFAULT_NAV,
-  desktopLogo = { src: "/logomark.jpeg", width: 111, height: 230, alt: "APM" },
+  desktopLogo = { src: "/logoext.png", width: 111, height: 230, alt: "APM" },
 }) {
   const pathname = usePathname();
 
@@ -26,12 +26,12 @@ export default function Navbar({
 
   const linkBase =
     "inline-block rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2448A1]/50";
-  const linkDesktop = `${montserrat.className} text-[#16469D] text-[clamp(18px,2.2vw,34px)] leading-none font-bold`;
+  const linkDesktop = `${montserrat.className} text-[#16469D] text-[clamp(18px,2.2vw,34px)] leading-none font-light`;
 
   return (
     <header className="fixed top-0 w-full z-50">
       {/* Desktop */}
-      <div className="hidden md:grid w-full bg-white border-b-[4px] border-[#2448A1]  h-[clamp(200px,14.48vw,278px)] grid-cols-[auto_1fr] items-center">
+      <div className="hidden md:grid w-full bg-white border-b-[2px] border-[#2448A1]  h-[clamp(200px,14.48vw,278px)] grid-cols-[auto_1fr] items-center">
         <div className="pl-[3.6vw]">
           <Image
             src={desktopLogo.src}

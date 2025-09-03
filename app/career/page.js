@@ -131,7 +131,7 @@ export default function CareersPage() {
         {/* `mt-8` provides the vertical space below the title. */}
         {/* `leading-relaxed` adds extra line spacing for better readability. */}
         <p className="text-left sm:text-center md:text-left lg:text-left mt-6 text-[clamp(1rem,1.6vw,1.65rem)] font-light text-black leading-relaxed px-6 md:px-0 lg:px-0">
-        We are passionate about fostering a deep understanding of Japanese cuisine and culture. Each year, select team members are invited on an all-expenses-paid R&D trip to Japan with founder Álvaro Perez Miranda. This immersive experience allows our team to connect with the heart of Japanese culinary traditions, sourcing ingredients, exploring new techniques, and deepening their appreciation for the culture.  Beyond this unique opportunity, we provide ongoing training programs to refine skills and enhance professional development.
+        We are passionate about fostering a deep understanding of Japanese cuisine and culture. Each year, select team members are invited on an all-expenses-paid R&D trip to Japan with founder Alvaro Perez Miranda. This immersive experience allows our team to connect with the heart of Japanese culinary traditions, sourcing ingredients, exploring new techniques, and deepening their appreciation for the culture.  Beyond this unique opportunity, we provide ongoing training programs to refine skills and enhance professional development.
         </p>
         
       </div>

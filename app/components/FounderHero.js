@@ -12,7 +12,7 @@ export default function FounderHero() {
             <div className="relative w-full" style={{ aspectRatio: "974 / 1130" }}>
               <Image
                 src="/abouths.webp"
-                alt="Álvaro Perez Miranda"
+                alt="Alvaro Perez Miranda"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
@@ -24,15 +24,15 @@ export default function FounderHero() {
           {/* RIGHT: Text */}
           <div className="flex flex-col justify-start lg:pl-2">
             <h2 className="text-[clamp(1.4rem,2.2vw,2.625rem)] font-medium text-black leading-tight">
-              Álvaro Perez Miranda
+              Alvaro Perez Miranda
             </h2>
-            <p className="mt-1 text-[clamp(1.1rem,1.8vw,2.125rem)] font-normal text-black">
+          {/*   <p className="mt-1 text-[clamp(1.1rem,1.8vw,2.125rem)] font-normal text-black">
               Founder & Curator
-            </p>
+            </p> */}
 
             <div className="mt-4 space-y-6 text-black">
               <p className="text-[clamp(1rem,1.6vw,1.65rem)] font-light leading-snug">
-                Álvaro Pérez Miranda has cultivated a career that turns
+                Alvaro Perez Miranda has cultivated a career that turns
                 hospitality into art. Guided by the Japanese principles of
                 omotenashi, komakai, and sensai, he brings an uncompromising
                 dedication to quality, authenticity, and care.
@@ -52,7 +52,7 @@ export default function FounderHero() {
               </p>
             </div>
 
-{/* Badges */}
+{/* Badges */}{/* 
 <div className="mt-6 w-full flex flex-wrap justify-start gap-3">
   {[
     "Michelin Star",
@@ -70,7 +70,7 @@ export default function FounderHero() {
       {label}
     </span>
   ))}
-</div>
+</div> */}
 
 
 

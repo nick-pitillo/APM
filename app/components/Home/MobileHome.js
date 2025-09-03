@@ -1,120 +1,132 @@
-// app/components/MobileHome.js
+// app/components/Home/MobileHome.js
 
+'use client';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link'; // 1. Import the Link component
 
-// 2. Add the `href` property to each object for navigation
-const homeSectionsData = [
+const slideshowImages = [
   {
     id: 1,
-    backgroundImage: '/midoriem.webp',
-    logoImage: '/midorie.webp',
+    src: '/midoriem.webp',
     alt: 'Wabi Sabi Dining Room Project',
-    href: 'https://www.midoriemiami.com/', // External
   },
   {
     id: 2,
-    backgroundImage: '/hiyam.webp',
-    logoImage: '/hiya.webp',
+    src: '/hiyam.webp',
     alt: 'Modern Living Area Project',
-    href: 'https://www.hiyakawamiami.com/', // External
   },
   {
     id: 3,
-    backgroundImage: '/ogawam.webp',
-    logoImage: '/ogawalogo.webp',
+    src: '/ogawam.webp',
     alt: 'Minimalist Interior Project',
-    href: 'https://www.ogawamiami.com/', // External
   },
   {
     id: 4,
-    backgroundImage: '/masam.webp',
-    logoImage: '/masayuki.webp',
+    src: '/masam.webp',
     alt: 'Commercial Space Project',
-    href: '/coming-soon/masayuki', // Internal
   },
   {
     id: 5,
-    backgroundImage: '/kurim.webp',
-    logoImage: '/kuri.webp',
+    src: '/kurim.webp',
     alt: 'Exterior Architecture Project',
-    href: '/coming-soon/kuri-kuri', // Internal
   },
 ];
 
 export default function MobileHome() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-advance slideshow
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slideshowImages.length) % slideshowImages.length);
+  };
+
   return (
-    <section className="flex flex-col bg-white">
-      {homeSectionsData.map((section) => {
-        // 3. Check if the link is external
-        const isExternal = section.href.startsWith('http');
-        
-        // Define the classes for the link container
-        const commonClasses = "relative block w-full";
-
-        // 4. Render the correct link type (<a> or <Link>)
-        if (isExternal) {
-          return (
-            <a
-              key={section.id}
-              href={section.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={commonClasses}
+    <div className="bg-black h-screen relative overflow-hidden">
+      <div className="h-[30vh] bg-[#16469D]"></div>
+      
+      {/* Slideshow Container - Adapted for mobile */}
+      <div 
+        className="absolute"
+        style={{
+          width: '90vw',
+          height: '80vh',
+          left: '50%',
+          top: '57vh',
+          transform: 'translate(-50%, -50%)',
+          background: 'linear-gradient(0deg, rgba(255, 0, 0, 0.20) 0%, rgba(255, 0, 0, 0.20) 100%), #D9D9D9'
+        }}
+      >
+        {/* Slideshow Images */}
+        <div className="relative w-full h-full overflow-hidden">
+          {slideshowImages.map((image, index) => (
+            <div
+              key={image.id}
+              className={`absolute inset-0 transition-opacity duration-500 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
             >
-              {/* All visual content is nested inside the link */}
               <Image
-                src={section.backgroundImage}
-                alt={section.alt}
-                width={1080}
-                height={508}
-                className="w-full h-auto"
-                priority={section.id === 1}
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover"
+                priority={index === 0}
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex items-center justify-center w-1/3 aspect-[357/312] bg-white/20 p-4">
-                  <Image
-                    src={section.logoImage}
-                    alt={`${section.alt} logo`}
-                    width={336}
-                    height={271}
-                    className="w-auto h-auto max-w-full max-h-full"
-                  />
-                </div>
-              </div>
-            </a>
-          );
-        }
-
-        return (
-          <Link
-            key={section.id}
-            href={section.href}
-            className={commonClasses}
-          >
-            {/* All visual content is nested inside the link */}
-            <Image
-              src={section.backgroundImage}
-              alt={section.alt}
-              width={1080}
-              height={508}
-              className="w-full h-auto"
-              priority={section.id === 1}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex items-center justify-center w-1/3 aspect-[357/312] bg-white/20 p-4">
-                <Image
-                  src={section.logoImage}
-                  alt={`${section.alt} logo`}
-                  width={336}
-                  height={271}
-                  className="w-auto h-auto max-w-full max-h-full"
-                />
-              </div>
             </div>
-          </Link>
-        );
-      })}
-    </section>
+          ))}
+          
+          {/* Navigation Arrows - Smaller for mobile */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-black p-1.5 rounded-full transition-colors z-10"
+            aria-label="Previous image"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-black p-1.5 rounded-full transition-colors z-10"
+            aria-label="Next image"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+          
+          {/* Dot Indicators - Smaller for mobile */}
+          <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1.5">
+            {slideshowImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                  index === currentSlide ? 'bg-white' : 'bg-white/50'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

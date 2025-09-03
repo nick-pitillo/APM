@@ -56,12 +56,7 @@ const PRINCIPLES = [
   {
     title: "Sensai",
     blurb: "Sensitivity to season, setting, and experience.",
-  },
-  {
-    title: "Transformation",
-    blurb:
-      "Turning the ordinary into the extraordinary through vision and craft.",
-  },
+  }, 
 ];
 
 const Page = () => {
@@ -83,11 +78,11 @@ const Page = () => {
     <header className="w-full bg-white py-2 font-montserrat mt-16">
 
 {/* An inner container to center the content and limit its max width. */}
-<div className="container mx-auto px-4 text-center">
+<div className="container mx-auto px-4 py-20 text-center">
 
   {/* The main title - Font size now matches the reference */}
-  <h1 className="text-[clamp(1.4rem,2.2vw,2.625rem)] font-bold text-gray-900 font-montserrat">
-    Led by Masters
+  <h1 className="text-[clamp(0.4rem,1.2vw,1.625rem)] font-extralight text-gray-900 font-montserrat">
+  APM Restaurant Group is a Miami-based collection of award-winning Japanese restaurants, each reflecting a unique culinary concept and unwavering dedication to quality, authenticity, and impeccable service. All APM restaurants share the principles of omotenashi, komakai, and sensai. Founded by Alvaro Perez Miranda, APM brings the highest standards of Japanese cuisine with the warmth of Latin hospitality to South Florida, blending traditional artistry with a modern, sophisticated experience.Led by Masters
   </h1>
 
   {/* The separator line - Margin-top now matches the reference */}
@@ -95,41 +90,27 @@ const Page = () => {
 
   {/* The subtitle remains, positioned below the updated line */}
   <h3 className='text-[clamp(1rem,1.6vw,1.65rem)] font-medium mt-5 text-black font-montserrat uppercase'>
-    Omotenashi • Komakai • Sensai • Transformation
+    Omotenashi • Komakai • Sensai
   </h3>
 </div>
 </header>
 <FounderHero />
 <PressStrip />
-<section className="w-full bg-[#16469D] py-20 font-montserrat">
-      <div className="mx-auto max-w-[1620px] px-6 md:px-10">
-        <p className="text-center text-white text-[clamp(1rem,1.6vw,1.65rem)] font-light leading-relaxed">
-          APM Restaurant Group is a Miami-based collection of award-winning
-          Japanese restaurants, each reflecting a unique culinary concept and
-          unwavering dedication to quality, authenticity, and impeccable
-          service. All APM restaurants share the principles of omotenashi,
-          komakai, and sensai. Founded by Álvaro Pérez Miranda, APM brings the
-          highest standards of Japanese cuisine with the warmth of Latin
-          hospitality to South Florida, blending traditional artistry with a
-          modern, sophisticated experience.
-        </p>
-      </div>
-    </section>
-  <PartnerSec />
+
    {/* Mobile-only (stacked) */}
-<section className="w-full flex justify-center lg:hidden py-4">
-  <div className="w-full max-w-[917px] px-4">
-    <div className="grid gap-5">
+   <section className="w-full bg-[#16469D] flex justify-center items-center lg:hidden py-12">
+  <div className="w-full max-w-[917px] px-4 flex justify-center">
+    <div className="grid gap-8 w-full max-w-[600px]">
       {PRINCIPLES.map((item) => (
         <div
           key={item.title}
-          className="bg-[#16469D] text-white flex min-h-[9rem] flex-col items-start justify-center px-6"
+          className="bg-white text-[#16469D] flex min-h-[12rem] flex-col items-center justify-center px-8 py-8 rounded-lg shadow-lg border-2 border-[#16469D]/10 mx-auto w-full"
           role="listitem"
         >
-          <h3 className="font-montserrat font-bold text-[clamp(1.4rem,2.2vw,2.625rem)] leading-tight text-left w-full">
+          <h3 className="font-montserrat font-bold text-[clamp(1.6rem,2.4vw,2.8rem)] leading-tight text-center mb-4">
             {item.title}
           </h3>
-          <p className="font-montserrat font-light text-[clamp(1rem,1.6vw,1.65rem)] leading-snug text-left mt-2 max-w-[740px] w-full">
+          <p className="font-montserrat font-medium text-[clamp(1.1rem,1.8vw,1.75rem)] leading-relaxed text-center max-w-[600px]">
             {item.blurb}
           </p>
         </div>
@@ -140,59 +121,56 @@ const Page = () => {
 
 
 {/* Desktop-only (grid) */}
-<section className="w-full bg-white py-7 font-montserrat hidden md:hidden lg:block">
-  <div className="mx-auto px-4">
-    <div
-      className="
-        grid gap-9
-        sm:grid-cols-2
-        lg:grid-cols-4
-        justify-center place-items-center
-      "
-    >
-      {PRINCIPLES.map((p) => (
-        <div
-          key={p.title}
-          className="
-            flex items-center justify-center rounded-none bg-[#16469D] text-white
-            px-6 aspect-square w-full max-w-[27.375rem] overflow-hidden
-          "
-        >
-          <div className="text-center">
-            <h3 className="text-[clamp(1.25rem,2vw,2rem)] font-bold leading-tight">{p.title}</h3>
-            <p className="mt-3 text-[clamp(1rem,1.5vw,1.35rem)] font-light leading-snug">
-              {p.blurb}
-            </p>
+<section className="w-full bg-[#16469D] py-16 font-montserrat hidden md:hidden lg:block">
+  <div className="mx-auto px-4 max-w-[1400px]">
+    <div className="flex justify-center items-center">
+      <div className="grid grid-cols-3 gap-12 justify-center place-items-center">
+        {PRINCIPLES.map((p) => (
+          <div
+            key={p.title}
+            className="
+              flex items-center justify-center rounded-lg bg-white text-[#16469D] shadow-lg
+              px-8 py-8 aspect-square w-full max-w-[350px] min-h-[350px]
+            "
+          >
+            <div className="text-center">
+              <h3 className="text-[clamp(1.4rem,2.2vw,2.4rem)] font-bold leading-tight mb-4">{p.title}</h3>
+              <p className="text-[clamp(1rem,1.6vw,1.4rem)] font-medium leading-relaxed">
+                {p.blurb}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </div>
 </section>
+  <PartnerSec />
 
 
 
    <ThirdSec />
    <FourthPartner />
-   <section className="w-full flex justify-center items-center bg-white py-4 md:py-24">
+   <section className="w-full flex justify-center items-center bg-[#16469D] py-12 md:py-24">
   <div
     className="
       container mx-auto
-      max-w-full
-      px-4 sm:px-6 lg:px-26
+      max-w-[1200px]
+      px-4 sm:px-6 lg:px-8
       font-montserrat
+      text-center
     "
   >
     {/* Title */}
-    <h2 className="text-[clamp(1.4rem,2.2vw,2.625rem)] font-medium text-black">
+    <h2 className="text-[clamp(1.4rem,2.2vw,2.625rem)] font-medium text-white">
       Sourcing at the Highest Level
     </h2>
 
     {/* Description */}
-    <p className="mt-4 text-[clamp(1rem,1.6vw,1.65rem)] font-light text-black leading-relaxed">
-      All APM restaurants benefit from seafood flown daily from Tokyo’s Toyosu
-      Fish Market. As Culinary Ambassador of Ibaraki, Álvaro brings the
-      prefecture’s most sought-after ingredients directly to our kitchens. This
+    <p className="mt-6 text-[clamp(1rem,1.6vw,1.65rem)] font-light text-white leading-relaxed max-w-[900px] mx-auto">
+      All APM restaurants benefit from seafood flown daily from Tokyo's Toyosu
+      Fish Market. As Culinary Ambassador of Ibaraki, Alvaro brings the
+      prefecture's most sought-after ingredients directly to our kitchens. This
       care in sourcing, paired with discipline in technique and service, defines
       the APM experience.
     </p>
@@ -335,7 +313,7 @@ const Page = () => {
             <p className="mt-2 text-[clamp(1rem,1.6vw,1.65rem)] font-light text-black max-w-[1569px]">
               APM Restaurant Group offers a transformative opportunity for a graduating Latinx hospitality or
               culinary professional: a stage at an APM restaurant and a fully funded study trip to Japan,
-              guided by Álvaro Pérez Miranda or a member of senior leadership.
+              guided by Alvaro Perez Miranda or a member of senior leadership.
             </p>
           </div>
         </div>
@@ -473,7 +451,7 @@ const Page = () => {
         <h2 className="text-white text-[clamp(1.4rem,2.2vw,2.625rem)] font-medium">Blackship Gallery</h2>
 
         <p className="mt-5 max-w-[100rem] text-white text-[clamp(1rem,1.6vw,1.65rem)] font-light leading-relaxed">
-          Founder Álvaro Pérez Miranda curates accomplished and emerging Japanese
+          Founder Alvaro Perez Miranda curates accomplished and emerging Japanese
           artists. Visit the gallery next to Wabi Sabi or on Instagram{" "}
           <a
             href="https://instagram.com/blackshipmoment"

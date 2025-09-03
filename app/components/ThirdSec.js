@@ -38,7 +38,7 @@ export default function ThirdSec() {
     Returning to Miami, Luis worked under Michael Mina at Bourbon Steak before joining the opening team at Alter by Brad Kilgore in 2016. As General Manager and Sommelier, he became known for his inventive wine pairings, spotlighting small producers and innovative winemaking techniques. Under his leadership, Alter’s wine program was named one of the Top 100 in America by Wine Enthusiast for several years.
   </p>
   <p className="text-[clamp(1rem,1.6vw,1.65rem)] font-light leading-snug">
-    In 2020, Luis partnered with Álvaro Pérez Miranda and Masayuki Komatsu to open Hiyakawa in Wynwood, curating a beverage program rooted in Japanese hospitality and sake service. Most recently, he became a partner at Ogawa in Little River, which received its first MICHELIN Star shortly after opening in 2023. Today, as Director of Operations and Beverage Director at APM Restaurant Group, he oversees Wabi Sabi, Hiyakawa, Midorie, and Ogawa, continuing to build thoughtful beverage programs that elevate Japanese cuisine.
+    In 2020, Luis partnered with Alvaro Perez Miranda and Masayuki Komatsu to open Hiyakawa in Wynwood, curating a beverage program rooted in Japanese hospitality and sake service. Most recently, he became a partner at Ogawa in Little River, which received its first MICHELIN Star shortly after opening in 2023. Today, as Director of Operations and Beverage Director at APM Restaurant Group, he oversees Wabi Sabi, Hiyakawa, Midorie, and Ogawa, continuing to build thoughtful beverage programs that elevate Japanese cuisine.
   </p>
 </div>
 

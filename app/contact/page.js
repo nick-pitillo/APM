@@ -41,7 +41,7 @@ const Page = () => {
         
         {/* Name */}
         <h2 className="text-2xl md:text-5xl font-medium text-black font-montserrat">
-          Álvaro Perez Miranda
+          Alvaro Perez Miranda
         </h2>
 
         {/* Title. The <br /> tag handles the line break from the original design. */}
@@ -61,7 +61,7 @@ const Page = () => {
         
         {/* Biography */}
         <p className="mt-6 md:mt-10 text-lg md:text-4xl font-light text-black font-montserrat leading-normal md:leading-relaxed">
-          Founder of APM Restaurant Group, Álvaro blends Japanese craft with Latin hospitality in Miami. He spent 15 years in Tokyo leading 70 restaurant projects. Ogawa earned a MICHELIN Star in 2024. He is Goodwill Ambassador for Japanese Cuisine and Ibaraki Culinary Ambassador.
+          Founder of APM Restaurant Group, Alvaro blends Japanese craft with Latin hospitality in Miami. He spent 15 years in Tokyo leading 70 restaurant projects. Ogawa earned a MICHELIN Star in 2024. He is Goodwill Ambassador for Japanese Cuisine and Ibaraki Culinary Ambassador.
         </p>
 
       </div>
