@@ -9,45 +9,51 @@ const MobileNavbar = dynamic(() => import("../components/MobileNavbar"));
 const restaurantData = [
   {
     id: 1,
+    name: "Midorie",
+    websiteUrl: "https://www.midoriemiami.com",
     mainImage: {
       src: "/imgs/midorie.png",
-      alt: "Restaurant 1",
+      alt: "Midorie Restaurant",
       width: 831,
       height: 624,
     },
     logo: {
       src: "/overlaylogo.png",
-      alt: "Restaurant 1 Logo",
+      alt: "Midorie Logo",
       width: 300,
       height: 300,
     },
   },
   {
     id: 2,
+    name: "Ogawa",
+    websiteUrl: "https://www.ogawamiami.com",
     mainImage: {
       src: "/imgs/ogawa.png",
-      alt: "Restaurant 2",
+      alt: "Ogawa Restaurant",
       width: 833,
       height: 624,
     },
     logo: {
       src: "/ogawalogo.png",
-      alt: "Restaurant 2 Logo",
+      alt: "Ogawa Logo",
       width: 300,
       height: 300,
     },
   },
   {
     id: 3,
+    name: "Hiyakawa",
+    websiteUrl: "https://www.hiyakawamiami.com",
     mainImage: {
       src: "/imgs/hiyakawa.png",
-      alt: "Restaurant 3",
+      alt: "Hiyakawa Restaurant",
       width: 833,
       height: 624,
     },
     logo: {
       src: "/hiya.png",
-      alt: "Restaurant 3 Logo",
+      alt: "Hiyakawa Logo",
       width: 300,
       height: 300,
     },
@@ -55,6 +61,10 @@ const restaurantData = [
 ];
 
 export default function RestaurantsPage() {
+  const handleRestaurantClick = (websiteUrl) => {
+    window.open(websiteUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
       <main>
@@ -70,7 +80,19 @@ export default function RestaurantsPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[30%] w-full max-w-[75%]">
             <div className="flex justify-center items-start gap-x-4 md:gap-x-8">
               {restaurantData.map((restaurant) => (
-                <div key={restaurant.id} className="w-1/3 flex flex-col items-center space-y-4">
+                <div 
+                  key={restaurant.id} 
+                  className="w-1/3 flex flex-col items-center space-y-4 cursor-pointer transition-transform duration-200 hover:scale-105"
+                  onClick={() => handleRestaurantClick(restaurant.websiteUrl)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      handleRestaurantClick(restaurant.websiteUrl);
+                    }
+                  }}
+                >
                   <div className="w-full aspect-[4/3] relative">
                     <Image
                       src={restaurant.mainImage.src}

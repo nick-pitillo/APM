@@ -43,7 +43,7 @@ export default function Navbar({
         </div>
 
         <nav aria-label="Primary" className="h-full">
-          <ul className="h-full w-full flex items-center justify-center gap-[clamp(24px,4.6vw,88px)]">
+          <ul className="h-full w-full flex items-center justify-center gap-[clamp(24px,4.6vw,88px)] pr-[15vw]">
             {nav.map((item) => (
               <li key={item.href}>
                 <Link
