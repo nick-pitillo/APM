@@ -46,11 +46,6 @@ const slideshowImages = [
     alt: 'Modern Living Area Project',
   },
   {
-    id: 9,
-    src: '/gallery/vertical (9).webp',
-    alt: 'Modern Living Area Project',
-  },
-  {
     id: 10,
     src: '/gallery/vertical (10).webp',
     alt: 'Modern Living Area Project',

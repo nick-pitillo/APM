@@ -10,15 +10,7 @@ import PressStrip from '../components/PressStrip';
 
 export default function PressPage() {
   const allPressItems = [
-    {
-      id: 1,
-      title: "Creamy Udon Pasta with Umami Butter",
-      date: "August 26, 2025",
-      description: "A recipe for a creamy udon dish with an umami butter sauce, featured on the recipe-sharing platform Copy Me That.",
-      url: "https://www.foodandwine.com/creamy-udon-with-umami-butter-11784219",
-      image: "https://www.foodandwine.com/thmb/4DWfeHX1ubkOatLuWOnWTBrju8s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Creamy-Udon-with-Umami-Butter-FT-MAG-RECIPE-0925-94bfa0ef48cb4ee8a1df1ff29519dbee.jpg",
-      publication: "Food & Wine"
-    },
+   
     {
       id: 2,
       title: "Hiyakawa Is Popping Up in Wynwood",
@@ -225,7 +217,16 @@ export default function PressPage() {
       url: "https://miami.eater.com/2020/10/26/21533694/hiyakawa-miami-open-photos-menu",
       image: "https://platform.miami.eater.com/wp-content/uploads/sites/12/chorus/uploads/chorus_asset/file/21988541/Hiyakawa_Interior4.jpg?quality=90&strip=all&crop=0%2C0.013017443374117%2C100%2C99.973965113252&w=750",
       publication: "Eater Miami"
-    }
+    },
+    {
+      id: 25,
+      title: "Creamy Udon Pasta with Umami Butter",
+      date: "August 26, 2025",
+      description: "A recipe for a creamy udon dish with an umami butter sauce, featured on the recipe-sharing platform Copy Me That.",
+      url: "https://www.foodandwine.com/creamy-udon-with-umami-butter-11784219",
+      image: "https://www.foodandwine.com/thmb/4DWfeHX1ubkOatLuWOnWTBrju8s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Creamy-Udon-with-Umami-Butter-FT-MAG-RECIPE-0925-94bfa0ef48cb4ee8a1df1ff29519dbee.jpg",
+      publication: "Food & Wine"
+    },
   ];
 
   const [visibleItems, setVisibleItems] = useState(6); // Show first 6 items initially
@@ -307,7 +308,7 @@ export default function PressPage() {
 
       <div className="bg-white min-h-screen relative">
       {/* Blue background section */}
-      <div className="px-2 sm:px-2 lg:px-2 relative">
+      <div className="shadow-md px-2 sm:px-2 lg:px-2 relative">
         <div className="rounded-2xl h-[150px] sm:h-[170px] md:h-[180px] lg:h-[180px] xl:h-[200px] bg-[#16469D] absolute top-[40px] md:top-[80px] left-2 right-2 w-auto z-10" />
         
         {/* Header section in blue area - centered in blue background */}
@@ -351,10 +352,10 @@ export default function PressPage() {
 
         {/* Load More Button - only show if there are more items */}
         {hasMoreItems && (
-          <div className="flex justify-center mt-6 sm:mt-20 md:mt-20 lg:mt-20 xl:mt-20">
+          <div className="shadow-md flex justify-center mt-6 sm:mt-20 md:mt-20 lg:mt-20 xl:mt-20">
             <button 
               onClick={loadMoreItems}
-              className="rounded-2xl w-full max-w-[45%] md:max-w-[15%] lg:max-w-[15%] xl:max-w-[15%] h-[3rem] bg-[#16469D] flex items-center justify-center hover:bg-[#1a5bb8] transition-colors"
+              className="shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] rounded-2xl w-full max-w-[45%] md:max-w-[15%] lg:max-w-[15%] xl:max-w-[15%] h-[3rem] bg-[#16469D] flex items-center justify-center hover:bg-[#1a5bb8] transition-all duration-300 relative z-10"
             >
               <span className="text-white text-[clamp(0.9rem,1.4vw,1.45rem)] font-montserrat font-light px-4">
                 Load More

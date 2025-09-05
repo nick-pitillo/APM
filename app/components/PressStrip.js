@@ -7,32 +7,37 @@ const LOGOS = [
   { 
     src: "/haute.webp", 
     alt: "Haute Living",
-    url: "https://hauteliving.com/"
+    url: "https://hauteliving.com/2024/03/alvaro-perez-ogawa-miami/746969/"
   },
   { 
     src: "/time.webp", 
     alt: "Time Out",
-    url: "https://www.timeout.com/"
+    url: "https://www.miaminewtimes.com/best-of-miami/2024/eat-and-drink/best-japanese-restaurant-20442338"
   },
   { 
     src: "/michelin.webp", 
     alt: "Michelin 2024",
-    url: "https://guide.michelin.com/"
+    url: "https://guide.michelin.com/us/en/florida/miami/restaurant/hiyakawa-miami"
   },
   { 
     src: "/newtime.webp", 
     alt: "Miami New Times",
-    url: "https://www.miaminewtimes.com/"
+    url: "https://www.miaminewtimes.com/restaurants/ogawa-miamis-newest-omakase-experience-opens-in-little-river-18284745"
   },
   { 
     src: "/travel.webp", 
     alt: "World's Best Awards",
-    url: "https://www.travelandleisure.com/worlds-best"
+    url: "https://www.travelandleisure.com/ogawa-miami-florida-highest-rated-michelin-restaurant-in-the-us-8762818"
   },
   { 
     src: "/infatu.webp", 
     alt: "The Infatuation",
-    url: "https://www.theinfatuation.com/"
+    url: "https://www.nytimes.com/2024/12/02/travel/miami-neighborhoods-guide.html"
+  },
+  { 
+    src: "/Japan.webp", 
+    alt: "The Infatuation",
+    url: "https://www.miamilivingmagazine.com/post/miami-restaurateur-alvaro-perez-miranda-appointed-goodwill-ambassador-for-japanese-cuisine"
   },
 ];
 
@@ -53,12 +58,14 @@ export default function PressStrip() {
           }
         }
         .animate-scroll {
-        
-          animation: scroll 3s linear infinite;
+          animation: scroll 15s linear infinite;
+          will-change: transform;
+          backface-visibility: hidden;
+          perspective: 1000px;
         }
-             @media (min-width: 768px) {
+        @media (min-width: 768px) {
           .animate-scroll {
-            animation-duration: 50s;
+            animation-duration: 60s;
           }
         }
       `}</style>
@@ -72,11 +79,11 @@ export default function PressStrip() {
                 "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
             }}
           >
-            <div className="flex items-center animate-scroll">
+            <div className="flex items-center animate-scroll" style={{width: 'fit-content'}}>
               {extendedLogos.map((logo, index) => {
                 // Define the different size categories
                 const isLarge = logo.src === "/infatu.webp";
-                const smallLogos = ["/haute.webp", "/michelin.webp", "/travel.webp"];
+                const smallLogos = ["/haute.webp", "/michelin.webp", "/travel.webp", "/Japan.webp"];
                 const isSmall = smallLogos.includes(logo.src);
 
                 // Conditionally determine the size classes for each logo
@@ -100,7 +107,7 @@ export default function PressStrip() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`
-                      relative mx-12 flex-shrink-0
+                      relative mx-6 md:mx-12 flex-shrink-0
                       flex items-center justify-center
                       transition-all duration-300 hover:scale-105
                       cursor-pointer
