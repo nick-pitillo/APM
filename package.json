@@ -1,0 +1,30 @@
+{
+  "name": "groupie",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "images:webp": "node scripts/convert-to-webp.cjs"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "next": "15.4.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "24.3.0",
+    "@types/react": "19.1.10",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4"
+  }
+}
