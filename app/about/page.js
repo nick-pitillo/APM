@@ -152,9 +152,9 @@ const Page = () => {
 
     {/* Description */}
     <p className="mt-6 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-white leading-relaxed max-w-[900px] mx-auto">
-      All APM restaurants benefit from seafood flown daily from Tokyo's Toyosu
+      All APM restaurants benefit from seafood flown daily from Tokyo&apos;s Toyosu
       Fish Market. As Culinary Ambassador of Ibaraki, Alvaro brings the
-      prefecture's most sought-after ingredients directly to our kitchens. This
+      prefecture&apos;s most sought-after ingredients directly to our kitchens. This
       care in sourcing, paired with discipline in technique and service, defines
       the APM experience.
     </p>

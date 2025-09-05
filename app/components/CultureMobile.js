@@ -62,7 +62,7 @@ export default function CultureMobile() {
 
           <h3 className="mt-5 text-[clamp(0.9rem,1.4vw,1.45rem)] font-normal text-black">Exceptional Care &amp; Benefits</h3>
           <p className="mt-2 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-black leading-snug mx-auto max-w-[600px] px-14">
-            At APM, we nurture our team's well-being with limited hours, select days of operation,
+            At APM, we nurture our team&apos;s well-being with limited hours, select days of operation,
             and controlled seating for a healthy work–life balance.
           </p>
         </div>
