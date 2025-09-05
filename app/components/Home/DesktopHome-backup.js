@@ -5,32 +5,32 @@ import Image from 'next/image';
 const desktopSectionsData = [
   {
     id: 1,
-    backgroundImage: '/midoriebg.png',
-    logoImage: '/midorie.png',
+    backgroundImage: '/midoriebg.webp',
+    logoImage: '/midorie.webp',
     alt: 'Wabi Sabi Dining Room Project',
   },
   {
     id: 2,
-    backgroundImage: '/hayabgdesk.png',
-    logoImage: '/hiya.png',
+    backgroundImage: '/hayabgdesk.webp',
+    logoImage: '/hiya.webp',
     alt: 'Modern Living Area Project',
   },
   {
     id: 3,
-    backgroundImage: '/ogawabg.png',
-    logoImage: '/ogawalogo.png',
+    backgroundImage: '/ogawabg.webp',
+    logoImage: '/ogawalogo.webp',
     alt: 'Minimalist Interior Project',
   },
   {
     id: 4,
-    backgroundImage: '/masabg.png',
-    logoImage: '/masayuki.png',
+    backgroundImage: '/masabg.webp',
+    logoImage: '/masayuki.webp',
     alt: 'Commercial Space Project',
   },
   {
     id: 5,
-    backgroundImage: '/kuribg.png',
-    logoImage: '/kuri.png',
+    backgroundImage: '/kuribg.webp',
+    logoImage: '/kuri.webp',
     alt: 'Exterior Architecture Project',
   },
 ];

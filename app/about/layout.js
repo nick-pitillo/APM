@@ -8,7 +8,7 @@ export const metadata = {
     description:
       'A Miami-based collection of award-winning Japanese restaurants led by Alvaro Perez Miranda.',
     url: 'https://apmrestaurantgroup.com/about',
-    images: [{ url: '/apm.jpeg', width: 1200, height: 630, alt: 'About APM' }],
+    images: [{ url: '/apm.webp', width: 1200, height: 630, alt: 'About APM' }],
     type: 'website'
   },
   twitter: {

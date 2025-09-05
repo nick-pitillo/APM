@@ -8,7 +8,7 @@ export const metadata = {
     description:
       'Hospitality and culinary careers in Miami at APM Restaurant Group.',
     url: 'https://apmrestaurantgroup.com/career',
-    images: [{ url: '/exploreopp.png', width: 1200, height: 630, alt: 'Careers at APM' }],
+    images: [{ url: '/exploreopp.webp', width: 1200, height: 630, alt: 'Careers at APM' }],
     type: 'website'
   },
   twitter: {

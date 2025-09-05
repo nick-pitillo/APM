@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function PartnerSec() {
   return (
-    <section className="w-full bg-white font-montserrat">
-      <div className="mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+    <section className="w-full bg-white font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+      <div className="mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           {/* RIGHT: Image (order-last on large screens) */}
           {/* This block is first in the code, so it will appear on top on mobile */}
@@ -46,10 +46,10 @@ export default function PartnerSec() {
             </div>
 
             {/* Bottom Left Images */}
-            <div className="flex items-end justify-start ml-2 gap-4 mt-8 mb-4">
+            <div className="flex items-end justify-center md:justify-start lg:justify-start gap-4 mt-5 mb-5">
               <div className="relative w-40 h-32">
                 <Image
-                  src="/michelin.png"
+                  src="/michelin.webp"
                   alt="Michelin Star"
                   fill
                   className="object-contain"
@@ -57,7 +57,7 @@ export default function PartnerSec() {
               </div>
               <div className="relative w-40 h-32">
                 <Image
-                  src="/michelin25.png"
+                  src="/michelin25.webp"
                   alt="Award 2"
                   fill
                   className="object-contain"

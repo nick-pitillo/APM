@@ -3,8 +3,8 @@
 
 import dynamic from "next/dynamic";
 
-const Navbar = dynamic(() => import("./components/Navbar"));
-const MobileNavbar = dynamic(() => import("./components/MobileNavbar"));
+const Navbar = dynamic(() => import("./components/Navbar"), { ssr: false });
+const MobileNavbar = dynamic(() => import("./components/MobileNavbar"), { ssr: false });
 const MobileHome = dynamic(() => import("./components/Home/MobileHome"));
 const DesktopHome = dynamic(() => import("./components/Home/DesktopHome"));
 

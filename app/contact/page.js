@@ -6,13 +6,12 @@ import MobileNavbar from '../components/MobileNavbar';
 const Page = () => {
   return (
     <>
-   <div className="hidden md:block h-24 xl:h-32"></div>
-      <div className="hidden md:block top-0 z-50 w-full">
-      
+  <div className="hidden md:block h-[13.5rem]"></div>
+  <div className="hidden md:block top-0 z-50 w-full">
       <Navbar />
     </div>
     {/* Mobile Navbar: A 'block' by default, but becomes 'hidden' on medium screens (md) and up. */}
-    <div className="md:hidden h-24"></div>
+    <div className="md:hidden h-[5rem]"></div>
     <div className="fixed top-0 z-50 w-full md:hidden">
       <MobileNavbar />
 
@@ -37,7 +36,7 @@ const Page = () => {
         {/* Content starts below the blue header */}
         <div className="mt-[210px] sm:mt-[230px] md:mt-[260px] lg:mt-[280px] xl:mt-[300px]">
     
-    <section className="w-full bg-white py-12 md:py-16">
+    <section className="w-full bg-white mt-[-2.5rem] sm:py-12 md:py-16">
       
       {/* Inner container to center content and set a max-width, matching the original design. */}
       <div className="container mx-auto px-4 max-w-6xl">
@@ -48,10 +47,7 @@ const Page = () => {
         </h2>
 
         {/* Title. The <br /> tag handles the line break from the original design. */}
-        <p className="mt-4 md:mt-8 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-black font-montserrat">
-          Founder & Curator
-        </p>
-
+      
         {/* Contact Info. Wrapped in a div for spacing. Made into clickable links for functionality. */}
         <div className="mt-6 md:mt-10 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-[#16469D] font-montserrat">
           <a href="tel:305-333-2417" className="block hover:underline">

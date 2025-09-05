@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function FounderHero() {
   return (
-    <section className="w-full bg-white font-montserrat mt-2">
-      <div className="mx-auto max-w-[1800px] px-3 sm:px-4 lg:px-6 py-3 lg:py-4">
+    <section className="w-full bg-white font-montserrat  mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+      <div className="mx-auto max-w-[1800px] px-3 sm:px-4 lg:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           {/* LEFT: Image */}
           <div className="relative w-full">
@@ -53,10 +53,10 @@ export default function FounderHero() {
             </div>
 
             {/* Icon Image - Bottom Right */}
-            <div className="absolute bottom-0 right-10 mb-8">
-              <div className="relative w-42 h-42">
+            <div className="mt-5 flex justify-center lg:justify-end lg:absolute lg:bottom-0 lg:right-10 mb-2 lg:mb-8">
+              <div className="relative w-32 h-32 lg:w-42 lg:h-42">
                 <Image
-                  src="/Japan.JPG"
+                  src="/Japan.webp"
                   alt="APM Icon"
                   fill
                   sizes="128px"

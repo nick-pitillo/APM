@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const CultureOverlayGrid = () => {
   return (
-    <section className="w-75vw bg-white py-[2.5vw] px-[6.7vw] hidden md:block lg:block">
+    <section className="w-75vw bg-white px-[6.7vw] hidden md:block lg:block mt-30 mb-30">
       {/* Optional heading */}
       {/* <h2 className="text-center text-2xl font-semibold mb-10 text-black">The APM Culture</h2> */}
 
@@ -28,7 +28,7 @@ const CultureOverlayGrid = () => {
           {/* Top-right image (810×444 in the ref). Use real src when ready. */}
           <div className="relative w-full md:h-[23.3vw] h-[300px] ">
             <Image
-              src="/about/Rectangle 63.png"
+              src="/about/Rectangle 63.webp"
               alt="Growth & Development visual"
               fill
               className="object-cover rounded-2xl"
@@ -42,7 +42,7 @@ const CultureOverlayGrid = () => {
           {/* Middle-left image (810×448 in the ref). */}
           <div className="relative w-full md:h-[23.55vw] h-[300px] ">
             <Image
-              src="/about/image 33.png"
+              src="/about/image 33.webp"
               alt="Immersive Training visual"
               fill
               className="object-cover rounded-2xl"
@@ -81,7 +81,7 @@ const CultureOverlayGrid = () => {
           {/* Bottom-right image (810×448 in the ref). */}
           <div className="relative w-full md:h-[23.55vw] h-[300px] ">
             <Image
-              src="/apm.jpeg"
+              src="/apm.webp"
               alt="Exceptional Care visual"
               fill
               className="object-cover rounded-2xl"

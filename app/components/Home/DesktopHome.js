@@ -7,68 +7,105 @@ import Image from 'next/image';
 const slideshowImages = [
   {
     id: 1,
-    src: '/gallery/image-104.JPG',
+    src: '/gallery/horizontal (1).webp',
     alt: 'Wabi Sabi Dining Room Project',
   },
   {
     id: 2,
-    src: '/gallery/image-48.JPG',
+    src: '/gallery/horizontal (2).webp',
     alt: 'Modern Living Area Project',
   },
   {
     id: 3,
-    src: '/gallery/image-44.JPG',
-    alt: 'Minimalist Interior Project',
+    src: '/gallery/horizontal (3).webp',
+    alt: 'Modern Living Area Project',
   },
   {
     id: 4,
-    src: '/gallery/image-107.jpg',
-    alt: 'Commercial Space Project',
+    src: '/gallery/horizontal (4).webp',
+    alt: 'Modern Living Area Project',
   },
   {
     id: 5,
-    src: '/gallery/image-112.jpg',
-    alt: 'Exterior Architecture Project',
+    src: '/gallery/horizontal (5).webp',
+    alt: 'Modern Living Area Project',
   },
   {
     id: 6,
-    src: '/gallery/image-25.jpg',
-    alt: 'Exterior Architecture Project',
+    src: '/gallery/horizontal (6).webp',
+    alt: 'Modern Living Area Project',
   },
-  {
-    id: 13,
-    src: '/gallery/image-28.jpg',
-    alt: 'Exterior Architecture Project',
-  },
-  {
-    id: 7,
-    src: '/gallery/image-94.JPG',
-    alt: 'Exterior Architecture Project',
-  },
+
   {
     id: 8,
-    src: '/gallery/image-111.jpg',
-    alt: 'Exterior Architecture Project',
+    src: '/gallery/horizontal (8).webp',
+    alt: 'Modern Living Area Project',
   },
-  {
-    id: 9,
-    src: '/gallery/image-78.jpg',
-    alt: 'Exterior Architecture Project',
-  },
+ 
   {
     id: 10,
-    src: '/gallery/image-127.jpg',
-    alt: 'Exterior Architecture Project',
+    src: '/gallery/horizontal (10).webp',
+    alt: 'Modern Living Area Project',
   },
-    {
+  {
     id: 11,
-    src: '/gallery/image-30.JPG',
-    alt: 'Exterior Architecture Project',
+    src: '/gallery/horizontal (11).webp',
+    alt: 'Modern Living Area Project',
   },
   {
     id: 12,
-    src: '/gallery/image-90.jpg',
-    alt: 'Exterior Architecture Project',
+    src: '/gallery/horizontal (12).webp',
+    alt: 'Modern Living Area Project',
+  },
+  {
+    id: 13,
+    src: '/gallery/horizontal (13).webp',
+    alt: 'Modern Living Area Project',
+  },
+  {
+    id: 14,
+    src: '/gallery/horizontal (14).webp',
+    alt: 'Modern Living Area Project',
+  },
+  {
+    id: 15,
+    src: '/gallery/horizontal (15).webp',
+    alt: 'Modern Living Area Project',
+  },
+  {
+    id: 16,
+    src: '/gallery/horizontal (16).webp',
+    alt: 'Modern Living Area Project',
+  },
+  {
+    id: 17,
+    src: '/gallery/horizontal (17).webp',
+    alt: 'Modern Living Area Project',
+  },
+  {
+    id: 18,
+    src: '/gallery/horizontal (18).webp',
+    alt: 'Modern Living Area Project',
+  },
+  {
+    id: 19,
+    src: '/gallery/horizontal (19).webp',
+    alt: 'Modern Living Area Project',
+  },
+  {
+    id: 20,
+    src: '/gallery/horizontal (20).webp',
+    alt: 'Modern Living Area Project',
+  },
+  {
+    id: 21,
+    src: '/gallery/horizontal (21).webp',
+    alt: 'Modern Living Area Project',
+  },
+  {
+    id: 22,
+    src: '/gallery/horizontal (22).webp',
+    alt: 'Modern Living Area Project',
   },
 ];
 
@@ -101,11 +138,17 @@ export default function DesktopHome() {
   }, [slideshowLength]);
 
   return (
-    <div className="bg-black min-h-screen relative pt-[clamp(205px,14.48vw,278px)]">
-      {/* Slideshow Container - Full viewport */}
-      <div className="w-full h-screen relative">
+    <div className="bg-black h-full relative">
+      {/* Navbar Spacer - Creates natural document flow */}
+      <div className="h-[275px]"></div>
+      
+      {/* Fixed spacing for all screens */}
+      <div className="h-6"></div>
+      
+      {/* Slideshow Container */}
+      <div className="w-full h-screen relative px-2">
         {/* Slideshow Images */}
-        <div className="relative w-full h-screen overflow-hidden rounded-2xl">
+        <div className="relative w-full h-full overflow-hidden rounded-2xl">
           {slideshowImages.map((image, index) => (
             <div
               key={image.id}
@@ -117,7 +160,7 @@ export default function DesktopHome() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                className="object-cover object-center"
+                className="object-cover"
                 priority={index === 0}
               />
             </div>

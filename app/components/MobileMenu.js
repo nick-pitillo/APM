@@ -44,7 +44,7 @@ export default function MobileMenu({ open, onClose, nav }) {
         className={`relative w-[75vw] max-w-sm h-full bg-white shadow-xl transform transition-transform duration-300 ease-out ${open ? "translate-x-0" : "translate-x-full"} flex flex-col`}
       >
         {/* HEADER: Values are calibrated to match your design at 375px width. */}
-        <header className={`flex-shrink-0 flex items-center justify-between border-b-5 border-[#031E41] p-[clamp(1.75rem,4.4vw,1.65rem)]`}>
+        <header className={`flex-shrink-0 flex items-center justify-between border-b-2 border-[#2448A1] p-[clamp(2.01rem,4.4vw,1.65rem)] sm:p-[clamp(1.8rem,4.4vw,1.65rem)]`}>
           <h2
             id="menu-heading"
             className={`${montserrat.className} font-bold text-[#16469D] text-[clamp(0.9rem,1.4vw,1.45rem)]`}

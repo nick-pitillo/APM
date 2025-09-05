@@ -10,13 +10,13 @@ import Image from 'next/image';
 export default function CareersPage() {
   return (
     <main>
-        <div className="hidden md:block h-48 xl:h-52"></div>
+        <div className="hidden md:block h-[278px]"></div>
         <div className="hidden md:block top-0 z-50 w-full">
 
           <Navbar />
         </div>
 
-        <div className="md:hidden h-24"></div>
+        <div className="md:hidden h-[80px] sm:h-[105px] md:h-[100px] lg:h-[100px] xl:h-[100px]"></div>
         <div className="fixed top-0 z-50 w-full md:hidden">
           <MobileNavbar />
 
@@ -26,21 +26,19 @@ export default function CareersPage() {
       <CareersHero />
    
      
-      <FeaturedLogos />
-      <section className="w-full bg-white pt-24 md:pt-32 pb-10 md:pb-20 lg:pb-30 mx-auto">
-      
-      {/* 
-        Inner container:
-        - `container mx-auto`: Centers the content block horizontally.
-        - `max-w-7xl`: Sets a max-width to approximate the original design's width.
-        - `px-4`: Adds padding on the sides for smaller screens.
-      */}
-      <div className="container px-2 md:px-2 w-full font-montserrat mx-auto">
-        
-        {/* Title */}
-        {/* `text-[2.625rem]` uses an arbitrary value to exactly match the font size. */}
-        {/* `font-medium` matches the `fontWeight: '500'`. */}
-        <h2 id="opportunities" className="text-[clamp(0.9rem,1.4vw,1.45rem)] text-center font-medium text-black px-6 md:px-0 lg:px-0">
+      <FeaturedLogos />   <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+      <section className="shadow-md rounded-2xl w-full flex justify-center items-center bg-[#16469D] pt-13 pb-13">
+      <div
+        className="
+          container mx-auto
+          max-w-[1200px]
+          px-4 sm:px-6 lg:px-8
+          font-montserrat
+          text-center
+          flex flex-col items-center justify-center
+        "
+      >
+       <h2 id="opportunities" className="text-[clamp(0.9rem,1.4vw,1.45rem)] text-center font-medium  px-6 md:px-0 lg:px-0 text-white">
           Our Culture
         </h2>
         
@@ -49,13 +47,13 @@ export default function CareersPage() {
         {/* `font-light` matches the `fontWeight: '300'`. */}
         {/* `mt-6` provides the vertical space between the title and this paragraph. */}
         {/* `leading-relaxed` improves readability for the large block of text. */}
-        <p className="mt-6 text-center text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-black leading-relaxed px-6 md:px-0 lg:px-0">
+        <p className="mt-6 text-center text-white text-[clamp(0.9rem,1.4vw,1.45rem)] font-light  leading-relaxed px-6 md:px-0 lg:px-0">
           At APM Restaurant Group, we’re more than just a team we’re a family united by the Japanese principles of omotenashi (mindful hospitality), komakai (fine attention to detail), and sensai (sensitivity). Across our award-winning concepts, we create environments where creativity thrives, skills sharpen, and guests experience the warmth of true hospitality.
         </p>
-        
       </div>
     </section>
-    <section className="w-full bg-white py-2 px-8 sm:px-5">
+    </div>
+    <section className="w-full bg-white py-2 px-8 sm:px-5 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
       
       {/* 
         Inner Blue Placeholder Block:
@@ -67,7 +65,7 @@ export default function CareersPage() {
     <div className="container mx-auto flex h-[15.5rem] sm:h-[25.5rem] lg:h-[40.5rem] items-center justify-center relative overflow-hidden">
 
         <Image
-          src="/Career/image-4.jpg"
+          src="/Career/image-4.webp"
           alt="Explore career opportunities at APM"
           fill
           className="object-cover rounded-2xl md:object-top"
@@ -76,102 +74,81 @@ export default function CareersPage() {
         />
       </div>
     </section>
-    <section className="w-full bg-white pt-12 pb-12 px-8">
-      
-      {/* 
-        Inner container for the text content:
-        - `container mx-auto`: Centers the block horizontally.
-        - `max-w-7xl`: Constrains the width to match the original layout's feel.
-        - `px-4`: Adds horizontal padding on smaller screens to prevent text from touching the edges.
-      */}
-      <div className="container mx-auto font-montserrat">
-        
-        {/* Title */}
-        {/* `text-[2.625rem]` uses an arbitrary value to exactly match the font size. */}
-        {/* `font-medium` matches the `fontWeight: '500'`. */}
-        <h2 className="text-center text-[clamp(0.9rem,1.4vw,1.45rem)]  font-medium text-black">
-          A Culture of Growth & Development
+    <div className="px-2 sm:px-2 lg:px-2">
+      <section className="shadow-md rounded-2xl w-full flex justify-center items-center bg-[#16469D] pt-13 pb-13 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+      <div
+        className="
+          container mx-auto
+          max-w-[1200px]
+          px-4 sm:px-6 lg:px-8
+          font-montserrat
+          text-center
+          flex flex-col items-center justify-center
+        "
+      >
+       <h2 id="opportunities" className="text-[clamp(0.9rem,1.4vw,1.45rem)] text-center font-medium px-6 md:px-0 lg:px-0 text-white">
+       A Culture of Growth & Development
         </h2>
         
         {/* Description Text */}
-        {/* `text-4xl` is the Tailwind class for a 36px font size. */}
+        {/* `text-4xl` matches the `fontSize: 36`. */}
         {/* `font-light` matches the `fontWeight: '300'`. */}
-        {/* `mt-8` provides the vertical space below the title. */}
-        {/* `leading-relaxed` adds extra line spacing for better readability. */}
-        <p className="text-center mt-6 text-[clamp(0.9rem,1.4vw,1.45rem)]  font-light text-black leading-relaxed px-6 md:px-0 lg:px-0">
-          We offer unique opportunities for professional growth within our diverse collection of restaurants, from the vibrant energy of Wabi Sabi to the refined elegance of Ogawa. Our various concepts provide a rich landscape for skill development, allowing you to explore different culinary niches and expand your expertise. We encourage internal mobility, supporting the advancement of our team members within the group.
+        {/* `mt-6` provides the vertical space between the title and this paragraph. */}
+        {/* `leading-relaxed` improves readability for the large block of text. */}
+        <p className="mt-6 text-center text-white text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-black leading-relaxed px-6 md:px-0 lg:px-0">
+        We offer unique opportunities for professional growth within our diverse collection of restaurants, from the vibrant energy of Wabi Sabi to the refined elegance of Ogawa. Our various concepts provide a rich landscape for skill development, allowing you to explore different culinary niches and expand your expertise. We encourage internal mobility, supporting the advancement of our team members within the group.
         </p>
-        
       </div>
     </section>
+    </div>
     <CultureMobile />
     <CultureOverlayGrid /> 
     {/* Anchor for "Explore Opportunities" CTA */}
-    <div  className="scroll-mt-48 md:scroll-mt-[260px]"></div>
-    <section className="w-full bg-white py-14">
-      
-      {/* 
-        Inner container for the text content:
-        - `container mx-auto`: Centers the block horizontally.
-        - `max-w-7xl`: Constrains the width to match the original layout's feel.
-        - `px-4`: Adds horizontal padding on smaller screens to prevent text from touching the edges.
-      */}
-      <div className="container mx-auto font-montserrat">
+    <div className="px-2 sm:px-2 lg:px-2">
+      <section className="shadow-md rounded-2xl w-full flex justify-center items-center bg-[#16469D] pt-13 pb-13 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+      <div
+        className="
+          container mx-auto
+          max-w-[1200px]
         
-        {/* Title */}
-        {/* `text-[2.625rem]` uses an arbitrary value to exactly match the font size. */}
-        {/* `font-medium` matches the `fontWeight: '500'`. */}
-        <h2 className="text-center   text-[clamp(0.9rem,1.4vw,1.45rem)]  font-medium text-black px-6 md:px-0 lg:px-0">
-        Study and Practice
+          font-montserrat
+          text-center
+          flex flex-col items-center justify-center
+        "
+      >
+       <h2 id="opportunities" className="text-[clamp(0.9rem,1.4vw,1.45rem)] text-center font-medium  px-2 md:px-0 lg:px-0 text-white">
+       Study and Practice
         </h2>
         
         {/* Description Text */}
-        {/* `text-4xl` is the Tailwind class for a 36px font size. */}
+        {/* `text-4xl` matches the `fontSize: 36`. */}
         {/* `font-light` matches the `fontWeight: '300'`. */}
-        {/* `mt-8` provides the vertical space below the title. */}
-        {/* `leading-relaxed` adds extra line spacing for better readability. */}
-        <p className="text-center mt-6 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-black leading-relaxed px-6 md:px-0 lg:px-0">
+        {/* `mt-6` provides the vertical space between the title and this paragraph. */}
+        {/* `leading-relaxed` improves readability for the large block of text. */}
+        <p className="w-full mt-6 text-center text-white text-[clamp(0.9rem,1.4vw,1.45rem)] font-light  leading-relaxed  ">
         We are passionate about fostering a deep understanding of Japanese cuisine and culture. Each year, select team members are invited on an all-expenses-paid R&D trip to Japan with founder Alvaro Perez Miranda. This immersive experience allows our team to connect with the heart of Japanese culinary traditions, sourcing ingredients, exploring new techniques, and deepening their appreciation for the culture.  Beyond this unique opportunity, we provide ongoing training programs to refine skills and enhance professional development.
         </p>
-        
       </div>
     </section>
+    </div>
     <MeetOur />
-    {/* Desktop / Large screen */}
-<section className="w-full bg-white py-16 font-montserrat hidden md:block">
-  <div className="mx-auto max-w-[1600px] px-6 md:px-10 xl:px-20">
-    <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] text-center font-medium text-black mb-8">Join Us</h2>
-
-    <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] text-center font-light text-black leading-relaxed">
-      APM Restaurant Group is seeking talented and experienced hospitality
-      and culinary professionals to join our expanding team.
-    </p>
-
-    <p className="mt-6 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-center text-black leading-relaxed">
-      Explore our current openings and discover your place within our
-      exceptional team.
-    </p>
-
-    <p className="mt-6 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-center text-black leading-relaxed">
-      To explore working with us, please send your CV to{" "}
-      <a
-        href="mailto:careers@apmrestaurantgroup.com"
-        className="underline"
+<div className="px-2 sm:px-2 lg:px-2 mb-3">
+      <section className="shadow-md rounded-2xl w-full flex justify-center items-center bg-[#16469D] pt-13 pb-13 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+      <div
+        className="
+          container mx-auto
+          max-w-[1200px]
+          px-4 sm:px-6 lg:px-8
+          font-montserrat
+          text-center
+          flex flex-col items-center justify-center
+        "
       >
-        careers@apmrestaurantgroup.com
-      </a>
-      .
-    </p>
-  </div>
-</section>
-
-{/* Mobile / Small screen */}
-<section className="w-full bg-white py-10 px-4 font-montserrat block md:hidden">
-  <h2 className="text-center text-[clamp(0.9rem,1.4vw,1.45rem)]  font-medium text-black mb-6">
+     <h2 className="text-center text-white text-[clamp(0.9rem,1.4vw,1.45rem)]  font-medium mb-6">
     Join Us
   </h2>
 
-  <p className="mx-auto max-w-[837px] text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed text-black">
+  <p className="mx-auto text-white max-w-[837px] text-center text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed text-black">
     APM Restaurant Group is seeking talented and experienced hospitality
     and culinary professionals to join our expanding team.
     <br />
@@ -183,13 +160,18 @@ export default function CareersPage() {
     To explore working with us, please send your CV to{" "}
     <a
       href="mailto:careers@apmrestaurantgroup.com"
-      className="underline text-black"
+      className="underline text-white"
     >
       careers@apmrestaurantgroup.com
     </a>
     .
   </p>
-</section>
+      </div>
+    </section>
+    </div>
+
+
+    
 
     </main>
   );

@@ -9,7 +9,7 @@ export const metadata = {
       'APM Restaurant Group in the press: MICHELIN, Travel + Leisure, The Infatuation, and more.',
     url: 'https://apmrestaurantgroup.com/press',
     images: [
-      { url: '/press/ogawa.png', width: 1200, height: 630, alt: 'APM Press' }
+      { url: '/press/ogawa.webp', width: 1200, height: 630, alt: 'APM Press' }
     ],
     type: 'website'
   },

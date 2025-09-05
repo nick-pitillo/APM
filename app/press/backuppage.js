@@ -49,7 +49,7 @@ const allPressArticles = [
     "date": "June 19, 2025",
     "description": "This article announces the rebranding of the beloved Wabi Sabi to Midorie, aligning with the APM Restaurant Group's expansion plans and introducing a new hands-on omakase experience with a Temaki Bar.",
     "redir": "https://worldredeye.com/2025/06/wre-news-alvaro-perez-mirandas-wabi-sabi-reopens-as-midorie/",
-    "imageUrl": "/salmon.png"
+    "imageUrl": "/salmon.webp"
   },
   {
     "id": 6,

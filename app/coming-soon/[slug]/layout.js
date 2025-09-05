@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
       title,
       description,
       url: `https://apmrestaurantgroup.com/coming-soon/${slug}`,
-      images: [{ url: '/apm.jpeg', width: 1200, height: 630, alt: title }],
+      images: [{ url: '/apm.webp', width: 1200, height: 630, alt: title }],
       type: 'website'
     },
     twitter: {

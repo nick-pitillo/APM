@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function FourthPartner() {
   return (
-    <section className="w-full bg-white font-montserrat mt-4">
-      <div className="mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+    <section className="w-full bg-white font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+      <div className="mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           {/* RIGHT: Image (order-last on large screens) */}
           {/* This block is first in the code, so it will appear on top on mobile */}

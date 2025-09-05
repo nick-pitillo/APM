@@ -12,20 +12,20 @@ import { ImageGallerySlider } from './ImageGalleryClient';
 const restaurants = {
   'kuri-kuri': {
     name: 'Kuri Kuri',
-    logoUrl: '/kuri.png',
-    heroImageUrl: '/kurim.png',
+    logoUrl: '/kuri.webp',
+    heroImageUrl: '/kurim.webp',
     galleryImages: [
-      { id: 1, src: '/kurim.png', alt: 'Kuri Kuri dish 1', type: 'left' },
+      { id: 1, src: '/kurim.webp', alt: 'Kuri Kuri dish 1', type: 'left' },
     ],
   },
   'masayuki': {
     name: 'Masayuki',
-    logoUrl: '/masayuki.png',
-    heroImageUrl: '/mayuki/masa (4).JPG',
+    logoUrl: '/masayuki.webp',
+    heroImageUrl: '/mayuki/masa (4).webp',
     galleryImages: [
-      { id: 1, src: '/mayuki/masa (1).JPG', alt: 'Masayuki plate', type: 'left' },
-      { id: 2, src: '/mayuki/masa (2).JPG', alt: 'Masayuki chef', type: 'center' },
-      { id: 3, src: '/mayuki/masa (3).JPG', alt: 'Masayuki dessert', type: 'right' },
+      { id: 1, src: '/mayuki/masa (1).webp', alt: 'Masayuki plate', type: 'left' },
+      { id: 2, src: '/mayuki/masa (2).webp', alt: 'Masayuki chef', type: 'center' },
+      { id: 3, src: '/mayuki/masa (3).webp', alt: 'Masayuki dessert', type: 'right' },
     ],
   },
 };

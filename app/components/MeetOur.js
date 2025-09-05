@@ -32,7 +32,7 @@ const PEOPLE = [
 
 export default function MeetOur() {
   return (
-    <section className="w-full bg-white py-5 font-montserrat">
+    <section className="w-full bg-white font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 xl:px-20">
       <h2 className="text-center text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black">
   Meet Our People
@@ -40,7 +40,7 @@ export default function MeetOur() {
 
 
         {/* Grid */}
-        <div className="mt-15 grid grid-cols-1 gap-y-12 md:gap-y-14 lg:grid-cols-3 lg:gap-x-16 xl:gap-x-24">
+        <div className="mt-6 grid grid-cols-1 gap-y-6 md:gap-y-14 lg:grid-cols-3 lg:gap-x-16 xl:gap-x-24">
           {PEOPLE.map((p, index) => (
             <article key={`${p.name}-${index}`} className="mx-auto w-full max-w-[456px]">
               {/* Image */}

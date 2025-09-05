@@ -8,7 +8,7 @@ export const metadata = {
     description:
       'Events, press, and general inquiries for APM Restaurant Group in Miami.',
     url: 'https://apmrestaurantgroup.com/contact',
-    images: [{ url: '/about/Rectangle 53.png', width: 1200, height: 630, alt: 'Contact APM' }],
+    images: [{ url: '/about/Rectangle 53.webp', width: 1200, height: 630, alt: 'Contact APM' }],
     type: 'website'
   },
   twitter: {

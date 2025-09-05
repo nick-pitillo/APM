@@ -48,7 +48,7 @@ export const metadata = {
     siteName: 'APM Restaurant Group',
     images: [
       {
-        url: '/apm.jpeg',
+        url: '/apm.webp',
         width: 1200,
         height: 630,
         alt: 'APM Restaurant Group'
@@ -62,18 +62,18 @@ export const metadata = {
     title: 'APM Restaurant Group | Miami Japanese Restaurants',
     description:
       'Award-winning Japanese restaurants in Miami led by Alvaro Perez Miranda, including the MICHELIN-starred Ogawa.',
-    images: ['/apm.jpeg']
+    images: ['/apm.webp']
   },
   icons: {
     icon: [
       { url: '/favicon.ico' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
+      { url: '/favicon-16x16.webp', sizes: '16x16', type: 'image/webp' },
+      { url: '/favicon-32x32.webp', sizes: '32x32', type: 'image/webp' },
+      { url: '/android-chrome-192x192.webp', sizes: '192x192', type: 'image/webp' },
+      { url: '/android-chrome-512x512.webp', sizes: '512x512', type: 'image/webp' }
     ],
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+      { url: '/apple-touch-icon.webp', sizes: '180x180', type: 'image/webp' }
     ]
   },
   manifest: '/site.webmanifest',
@@ -105,7 +105,7 @@ export default function RootLayout({ children }) {
             '@type': 'Organization',
             name: 'APM Restaurant Group',
             url: 'https://apmrestaurantgroup.com/',
-            logo: 'https://apmrestaurantgroup.com/apm.jpeg',
+            logo: 'https://apmrestaurantgroup.com/apm.webp',
             sameAs: [
               'https://www.instagram.com/apmrestaurantgroup/'
             ],
