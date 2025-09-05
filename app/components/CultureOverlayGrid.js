@@ -14,10 +14,10 @@ const CultureOverlayGrid = () => {
         {/* Row 1: Text (left) / Image (right) */}
         <div className="md:col-span-6 flex items-center justify-center md:h-[23.3vw] h-[300px]">
           <div className="w-full max-w-[32vw] text-right">
-            <h3 className="text-[clamp(1.4rem,2.2vw,2.625rem)] font-normal leading-tight text-black">
+            <h3 className="text-[clamp(0.9rem,1.4vw,1.45rem)]  font-normal leading-tight text-black">
               Growth &amp; Development
             </h3>
-            <p className="mt-4 text-[clamp(1rem,1.6vw,1.65rem)] font-light leading-snug text-black">
+            <p className="mt-4 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-snug text-black">
               Opportunities to advance across our diverse concepts, from vibrant
               neighborhood favorites to refined Michelin-starred dining.
             </p>
@@ -26,12 +26,12 @@ const CultureOverlayGrid = () => {
 
         <div className="md:col-span-6">
           {/* Top-right image (810×444 in the ref). Use real src when ready. */}
-          <div className="relative w-full md:h-[23.3vw] h-[300px] bg-red-500">
+          <div className="relative w-full md:h-[23.3vw] h-[300px] ">
             <Image
               src="/about/Rectangle 63.png"
               alt="Growth & Development visual"
               fill
-              className="object-cover"
+              className="object-cover rounded-2xl"
               priority
             />
           </div>
@@ -40,23 +40,23 @@ const CultureOverlayGrid = () => {
         {/* Row 2: Image (left) / Text (right) */}
         <div className="md:col-span-6 order-2 md:order-none">
           {/* Middle-left image (810×448 in the ref). */}
-          <div className="relative w-full md:h-[23.55vw] h-[300px] bg-red-500">
+          <div className="relative w-full md:h-[23.55vw] h-[300px] ">
             <Image
               src="/about/image 33.png"
               alt="Immersive Training visual"
               fill
-              className="object-cover"
+              className="object-cover rounded-2xl"
             />
           </div>
         </div>
 
         <div className="md:col-span-6 flex items-center justify-center md:h-[23.55vw] h-[300px]">
           <div className="w-full max-w-[32vw] text-left">
-            <h3 className="text-[clamp(1.4rem,2.2vw,2.625rem)]
+            <h3 className="text-[clamp(0.9rem,1.4vw,1.45rem)] 
  font-normal leading-tight text-black">
               Immersive Training
             </h3>
-            <p className="mt-4 text-[clamp(1rem,1.6vw,1.65rem)] font-light leading-snug text-black">
+            <p className="mt-4 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-snug text-black">
               Annual all expenses-paid trips to Japan for select team members,
               connecting directly with the source of our traditions.
             </p>
@@ -66,10 +66,10 @@ const CultureOverlayGrid = () => {
         {/* Row 3: Text (left) / Image (right) */}
         <div className="md:col-span-6 flex items-center justify-center md:h-[23.55vw] h-[300px]">
           <div className="w-full max-w-[32vw] text-right">
-            <h3 className="text-[clamp(1.4rem,2.2vw,2.625rem)] font-normal leading-tight text-black">
+            <h3 className="text-[clamp(0.9rem,1.4vw,1.45rem)]  font-normal leading-tight text-black">
               Exceptional Care &amp; Benefits
             </h3>
-            <p className="mt-4 text-[clamp(1rem,1.6vw,1.65rem)] font-light leading-snug text-black">
+            <p className="mt-4 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-snug text-black">
               At APM, we nurture our team’s well-being with limited hours,
               select days of operation, and controlled seating for a healthy
               work–life balance.
@@ -79,12 +79,12 @@ const CultureOverlayGrid = () => {
 
         <div className="md:col-span-6">
           {/* Bottom-right image (810×448 in the ref). */}
-          <div className="relative w-full md:h-[23.55vw] h-[300px] bg-red-500">
+          <div className="relative w-full md:h-[23.55vw] h-[300px] ">
             <Image
               src="/apm.jpeg"
               alt="Exceptional Care visual"
               fill
-              className="object-cover"
+              className="object-cover rounded-2xl"
             />
           </div>
         </div>

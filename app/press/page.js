@@ -97,25 +97,25 @@ export default function PressPage() {
           src={item.image}
           alt={item.title}
           fill
-          className="object-cover"
+          className="object-cover rounded-2xl"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       
       {/* Publication name */}
       <div className="mb-3">
-        <span className="text-white text-[11px] font-montserrat font-normal uppercase leading-[13px] tracking-wide">
+        <span className="text-black text-[clamp(0.9rem,1.4vw,1.45rem)] font-montserrat font-normal uppercase leading-[13px] tracking-wide">
           {item.publication}
         </span>
       </div>
       
       {/* Title and subtitle */}
       <div className="mb-4 space-y-1">
-        <h3 className="text-white text-[22px] font-inter font-normal leading-[26px] break-words">
+        <h3 className="text-black text-[clamp(0.9rem,1.4vw,1.45rem)] font-inter font-normal leading-[26px] break-words">
           {item.title}
         </h3>
         {item.subtitle && (
-          <h4 className="text-white text-[21px] font-inter font-normal leading-[25px] break-words">
+          <h4 className="text-black text-[clamp(0.9rem,1.4vw,1.45rem)] font-inter font-normal leading-[25px] break-words">
             {item.subtitle}
           </h4>
         )}
@@ -123,7 +123,7 @@ export default function PressPage() {
       
       {/* Description */}
       <div className="flex-1">
-        <p className="text-white text-[13px] font-inter font-normal leading-[21px] break-words">
+        <p className="text-black text-[clamp(0.9rem,1.4vw,1.45rem)] font-inter font-normal leading-[21px] break-words">
           {item.description.split(' — ').map((part, i) => (
             <span key={i}>
               {i > 0 && ' — '}
@@ -149,24 +149,23 @@ export default function PressPage() {
         <MobileNavbar />
       </div>
 
-      <div className="bg-black min-h-screen relative">
+      <div className="bg-white min-h-screen relative">
       {/* Blue background section */}
-      <div className="h-[17%] sm:h-[18%] md:h-[20%] lg:h-[22%] xl:h-[28%] bg-[#16469D] absolute top-0 left-0 w-full" />
-      
-      {/* Header section in blue area */}
-      <header className="absolute top-20 md:top-30 lg:top-40 xl:top-50 mt-30 left-0 right-0 z-20 w-full py-2 font-montserrat">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-[clamp(1.4rem,2.2vw,2.625rem)] font-bold text-white font-montserrat">
+      <div className="px-2 sm:px-2 lg:px-2 relative">
+        <div className="rounded-2xl h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] xl:h-[280px] bg-[#16469D] absolute top-[90px] md:top-[206px] left-2 right-2 w-auto z-10" />
+        
+        {/* Header section in blue area - centered in blue background */}
+        <header className="absolute top-[90px] md:top-[205px] left-2 right-2 z-20 w-auto h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] xl:h-[280px] flex items-center justify-center font-montserrat">
+          <h1 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-extralight text-white font-montserrat text-center">
             Press
           </h1>
-          <hr className="mt-4 md:mt-6 lg:mt-6 w-full max-w-5xl mx-auto border-t-1 border-white" />
-        </div>
-      </header>
+        </header>
+      </div>
       
       {/* Main content container */}
-      <div className="relative z-10 container mx-auto px-4 py-8 max-w-7xl">
+      <div className="relative z-10 container mx-auto px-2 py-8 max-w-7xl">
         {/* Dynamic press items grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 mb-12 mt-100 sm:mt-105 md:mt-105 lg:mt-105 xl:mt-125">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 mb-12 mt-[310px] sm:mt-[330px] md:mt-[465px] lg:mt-[485px] xl:mt-[505px]">
           {allPressItems.slice(0, visibleItems).map((item, index) => (
             <div key={item.id} className="relative w-full">
               <PressItem item={item} />
@@ -185,7 +184,7 @@ export default function PressPage() {
                       "WABI SABI - Dining Room 2"
                     }
                     fill
-                    className="object-cover"
+                    className="object-cover rounded-2xl"
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 50vw, 33vw"
                   />
                 </div>
@@ -196,12 +195,12 @@ export default function PressPage() {
 
         {/* Load More Button - only show if there are more items */}
         {hasMoreItems && (
-          <div className="flex justify-center mt-16">
+          <div className="flex justify-center mt-20">
             <button 
               onClick={loadMoreItems}
-              className="w-full max-w-[398px] h-[65px] bg-[#16469D] rounded-[3px] flex items-center justify-center hover:bg-[#1a5bb8] transition-colors"
+              className="rounded-2xl w-full max-w-[15%] h-[3rem] bg-[#16469D] flex items-center justify-center hover:bg-[#1a5bb8] transition-colors"
             >
-              <span className="text-white text-[26px] font-montserrat font-normal px-4">
+              <span className="text-white text-[clamp(0.9rem,1.4vw,1.45rem)] font-montserrat font-normal px-4">
                 Load More
               </span>
             </button>

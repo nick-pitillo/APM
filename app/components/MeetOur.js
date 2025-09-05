@@ -34,7 +34,7 @@ export default function MeetOur() {
   return (
     <section className="w-full bg-white py-5 font-montserrat">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 xl:px-20">
-      <h2 className="text-center text-[2rem] sm:text-[1.85rem] md:text-[2.625rem] lg:text-[2.625rem] font-medium text-black">
+      <h2 className="text-center text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black">
   Meet Our People
 </h2>
 
@@ -49,16 +49,16 @@ export default function MeetOur() {
                   src={p.img}
                   alt={p.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-2xl"
                   sizes="(min-width: 1024px) 456px, 90vw"
                 />
               </div>
 
               {/* Text */}
               <div className="mt-6 text-black">
-                <h3 className="text-[1.8rem] sm:text-[1.85rem] md:text-[2.625rem] lg:text-[2.625rem] font-medium leading-none">{p.name}</h3>
-                <p className="mt-2  text-[clamp(1rem,1.6vw,1.65rem)] font-medium">{p.role}</p>
-                <p className="mt-4  text-[1.1rem] sm:text-[1.4rem] lg:text-[1.65rem]  font-light italic leading-snug">
+                <h3 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium leading-none">{p.name}</h3>
+                <p className="mt-2  text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium">{p.role}</p>
+                <p className="mt-4  text-[clamp(0.9rem,1.4vw,1.45rem)]  font-light italic leading-snug">
                   “{p.quote}”
                 </p>
               </div>

@@ -48,7 +48,7 @@ export default function FeaturedLogos() {
         }
       `}</style>
 
-      <section className="flex h-[7rem] sm:h-[8rem] md:h-[10rem] lg:h-[17.5625rem] w-full items-center justify-center bg-[#16469D]">
+      <section className="mt-2 flex h-[7rem] sm:h-[8rem] md:h-[10rem] lg:h-[17.5625rem] items-center justify-center bg-[#16469D] rounded-2xl mx-2">
         <div
           className="w-full overflow-hidden"
           style={{

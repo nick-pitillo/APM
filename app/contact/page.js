@@ -6,7 +6,7 @@ import MobileNavbar from '../components/MobileNavbar';
 const Page = () => {
   return (
     <>
-   <div className="hidden md:block h-48 xl:h-52"></div>
+   <div className="hidden md:block h-24 xl:h-32"></div>
       <div className="hidden md:block top-0 z-50 w-full">
       
       <Navbar />
@@ -19,38 +19,41 @@ const Page = () => {
       {/* Give this a z-index that is higher than the navbar's */}
 
     </div>
-    <header className="w-full bg-white py-2 font-montserrat mt-10 md:mt-16">
-
-      {/* An inner container to center the content and limit its max width. */}
-      <div className="container mx-auto px-4 text-center">
-
-        {/* The main title now uses clamp() for fluid sizing. */}
-        <h1 className="text-[clamp(1.2rem,2.2vw,2.625rem)] font-bold text-gray-900 font-montserrat">
-          Contact Our Team
-        </h1>
-
-        {/* The separator line - spacing is already correct. */}
-        <hr className="mt-12 w-full max-w-5xl mx-auto border-t-1 border-[#16469D]" />
-
+    <div className="bg-white min-h-screen relative">
+      {/* Blue background section */}
+      <div className="px-2 sm:px-2 lg:px-2 relative">
+        <div className="rounded-2xl h-[150px] sm:h-[170px] md:h-[180px] lg:h-[180px] xl:h-[200px] bg-[#16469D] absolute top-[40px] md:top-[80px] left-2 right-2 w-auto z-10" />
+        
+        {/* Header section in blue area - centered in blue background */}
+        <header className="absolute top-[40px] md:top-[80px] left-2 right-2 z-20 w-auto h-[150px] sm:h-[170px] md:h-[180px] lg:h-[180px] xl:h-[200px] flex items-center justify-center font-montserrat">
+          <h1 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-extralight text-white font-montserrat text-center">
+            Contact Our Team
+          </h1>
+        </header>
       </div>
-    </header>
-    <section className="w-full bg-white py-10 md:py-24">
+      
+      {/* Main content container */}
+      <div className="relative z-10 container mx-auto px-2 py-8 max-w-7xl">
+        {/* Content starts below the blue header */}
+        <div className="mt-[210px] sm:mt-[230px] md:mt-[260px] lg:mt-[280px] xl:mt-[300px]">
+    
+    <section className="w-full bg-white py-12 md:py-16">
       
       {/* Inner container to center content and set a max-width, matching the original design. */}
       <div className="container mx-auto px-4 max-w-6xl">
         
         {/* Name */}
-        <h2 className="text-2xl md:text-5xl font-medium text-black font-montserrat">
+        <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black font-montserrat">
           Alvaro Perez Miranda
         </h2>
 
         {/* Title. The <br /> tag handles the line break from the original design. */}
-        <p className="mt-2 md:mt-6 text-2xl md:text-5xl font-light text-black font-montserrat">
+        <p className="mt-4 md:mt-8 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-black font-montserrat">
           Founder & Curator
         </p>
 
         {/* Contact Info. Wrapped in a div for spacing. Made into clickable links for functionality. */}
-        <div className="mt-4 md:mt-10 text-md md:text-3xl font-light text-[#16469D] font-montserrat">
+        <div className="mt-6 md:mt-10 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-[#16469D] font-montserrat">
           <a href="tel:305-333-2417" className="block hover:underline">
             Phone: (305) 333-2417
           </a>
@@ -60,13 +63,13 @@ const Page = () => {
         </div>
         
         {/* Biography */}
-        <p className="mt-6 md:mt-10 text-lg md:text-4xl font-light text-black font-montserrat leading-normal md:leading-relaxed">
+        <p className="mt-6 md:mt-10 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-black font-montserrat leading-normal md:leading-relaxed">
           Founder of APM Restaurant Group, Alvaro blends Japanese craft with Latin hospitality in Miami. He spent 15 years in Tokyo leading 70 restaurant projects. Ogawa earned a MICHELIN Star in 2024. He is Goodwill Ambassador for Japanese Cuisine and Ibaraki Culinary Ambassador.
         </p>
 
       </div>
     </section>
-    <section className="w-full bg-white py-2 md:py-16">
+    <section className="w-full bg-white py-8 md:py-12">
       
       {/* 
         This div is the placeholder for the image or media content.
@@ -83,14 +86,14 @@ const Page = () => {
             alt="Contact image"
             fill
             sizes="(min-width: 1126px) 1126px, 100vw"
-            className="object-cover"
+            className="object-cover rounded-2xl"
             priority
           />
         </div>
       </div>
 
     </section>
-    <section className="w-full bg-white py-10 md:py-24">
+    <section className="w-full bg-white py-12 md:py-16">
       
       {/* 
         Inner container to center content and set a max-width.
@@ -101,7 +104,7 @@ const Page = () => {
         
         {/* --- Corporate Office Section --- */}
         <div>
-          <h2 className="text-2xl md:text-5xl font-medium text-black font-montserrat mb-8">
+          <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black font-montserrat mb-6">
             Corporate Office
           </h2>
           
@@ -112,7 +115,7 @@ const Page = () => {
             - `text-2xl md:text-3xl`: Sets responsive font size for the text.
             - `leading-relaxed`: Increases line height for readability.
           */}
-          <div className="mt-4 space-y-2 text-lg md:text-3xl leading-relaxed font-montserrat">
+          <div className="space-y-2 text-[clamp(0.9rem,1.4vw,1.45rem)] leading-relaxed font-montserrat">
             <p className="font-light">
               <strong className="font-medium text-[#043573]">Address: </strong>
               <span className="text-black">853 NE 79th St, Miami, FL 33138</span>
@@ -130,11 +133,11 @@ const Page = () => {
 
         {/* --- Press Inquiries Section --- */}
         <div>
-          <h2 className="text-2xl md:text-5xl font-medium text-black font-montserrat mb-8">
+          <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black font-montserrat mb-6">
             Press Inquiries
           </h2>
           
-          <div className="mt-4 md:space-y-2 text-lg md:text-3xl leading-relaxed font-montserrat">
+          <div className="space-y-2 text-[clamp(0.9rem,1.4vw,1.45rem)] leading-relaxed font-montserrat">
             <p className="font-light">
               <strong className="font-medium text-[#043573]">Name: </strong>
               <span className="text-black">Nicole Paloux</span>
@@ -148,12 +151,12 @@ const Page = () => {
         
       </div>
     </section>
-    <section className="w-full bg-white py-6 md:py-24">
+    <section className="w-full bg-white py-12 md:py-16">
       
       {/* Inner container to center the form and set a max-width. */}
       <div className="container mx-auto max-w-6xl px-4">
         
-        <h2 className="text-2xl md:text-5xl font-medium text-black font-montserrat">
+        <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black font-montserrat">
           Get in Touch
         </h2>
 
@@ -161,7 +164,7 @@ const Page = () => {
           The form element. 
           `mt-16` adds space below the title.
         */}
-        <form className="mt-12 md:mt-16" noValidate>
+        <form className="mt-8 md:mt-12" noValidate>
           {/* 
             CSS Grid container for the form fields.
             - `grid-cols-1`: On mobile, it's a single column.
@@ -173,7 +176,7 @@ const Page = () => {
             
             {/* --- Full Name --- */}
             <div>
-              <label htmlFor="fullName" className="block text-base md:text-2xl font-normal text-black font-montserrat mb-2 md:mb-3">
+              <label htmlFor="fullName" className="block text-[clamp(0.9rem,1.4vw,1.45rem)] font-normal text-black font-montserrat mb-2 md:mb-3">
                 Full Name
               </label>
               <input 
@@ -181,13 +184,13 @@ const Page = () => {
                 id="fullName" 
                 name="fullName" 
                 autoComplete="name"
-                className="w-full bg-transparent p-4 md:p-6 border-2 border-[#16469D] text-base md:text-lg"
+                className="rounded-2xl w-full bg-transparent p-4 md:p-6 border-2 border-[#16469D] text-[clamp(0.9rem,1.4vw,1.45rem)]"
               />
             </div>
 
             {/* --- Email --- */}
             <div>
-              <label htmlFor="email" className="block text-base md:text-2xl font-normal text-black font-montserrat mb-2 md:mb-3">
+              <label htmlFor="email" className="block text-[clamp(0.9rem,1.4vw,1.45rem)] font-normal text-black font-montserrat mb-2 md:mb-3">
                 Email
               </label>
               <input 
@@ -195,13 +198,13 @@ const Page = () => {
                 id="email" 
                 name="email" 
                 autoComplete="email"
-                className="w-full bg-transparent p-4 md:p-6 border-2 border-[#16469D] text-base md:text-lg"
+                className="rounded-2xl w-full bg-transparent p-4 md:p-6 border-2 border-[#16469D] text-[clamp(0.9rem,1.4vw,1.45rem)]"
               />
             </div>
 
             {/* --- Phone Number --- */}
             <div>
-              <label htmlFor="phone" className="block text-base md:text-2xl font-normal text-black font-montserrat mb-2 md:mb-3">
+              <label htmlFor="phone" className="block text-[clamp(0.9rem,1.4vw,1.45rem)] font-normal text-black font-montserrat mb-2 md:mb-3">
                 Phone Number
               </label>
               <input 
@@ -209,33 +212,33 @@ const Page = () => {
                 id="phone" 
                 name="phone" 
                 autoComplete="tel"
-                className="w-full bg-transparent p-4 md:p-6 border-2 border-[#16469D] text-base md:text-lg"
+                className="rounded-2xl w-full bg-transparent p-4 md:p-6 border-2 border-[#16469D] text-[clamp(0.9rem,1.4vw,1.45rem)]"
               />
             </div>
 
             {/* --- Subject --- */}
             <div>
-              <label htmlFor="subject" className="block text-base md:text-2xl font-normal text-black font-montserrat mb-2 md:mb-3">
+              <label htmlFor="subject" className="block text-[clamp(0.9rem,1.4vw,1.45rem)] font-normal text-black font-montserrat mb-2 md:mb-3">
                 Subject
               </label>
               <input 
                 type="text" 
                 id="subject" 
                 name="subject"
-                className="w-full bg-transparent p-4 md:p-6 border-2 border-[#16469D] text-base md:text-lg"
+                className="rounded-2xl w-full bg-transparent p-4 md:p-6 border-2 border-[#16469D] text-[clamp(0.9rem,1.4vw,1.45rem)]"
               />
             </div>
 
             {/* --- Message --- */}
-            <div className="md:col-span-2"> {/* This makes the message field span both columns on desktop */}
-              <label htmlFor="message" className="block text-base md:text-2xl font-normal text-black font-montserrat mb-2 md:mb-3">
+            <div className="md:col-span-2 "> {/* This makes the message field span both columns on desktop */}
+              <label htmlFor="message" className="block text-[clamp(0.9rem,1.4vw,1.45rem)] font-normal text-black font-montserrat mb-2 md:mb-3 ">
                 Message
               </label>
               <textarea 
                 id="message" 
                 name="message" 
                 rows="5"
-                className="w-full bg-transparent p-4 md:p-6 border-2 border-[#16469D] text-base md:text-lg"
+                className="rounded-2xl w-full bg-transparent p-4 md:p-6 border-2 border-[#16469D] text-[clamp(0.9rem,1.4vw,1.45rem)]"
               ></textarea>
             </div>
           </div>
@@ -243,7 +246,7 @@ const Page = () => {
           {/* --- Submit Button --- */}
           <button 
             type="submit" 
-            className="w-full mt-10 md:mt-12 bg-[#16469D] text-white font-medium text-lg md:text-3xl py-4 md:py-7 transition-colors hover:bg-blue-800"
+            className="w-full mt-8 md:mt-10 bg-[#16469D] rounded-2xl text-white font-medium text-[clamp(0.9rem,1.4vw,1.45rem)] py-4 md:py-7 transition-colors hover:bg-blue-800"
           >
             Send Message
           </button>
@@ -251,6 +254,9 @@ const Page = () => {
         </form>
       </div>
     </section>
+        </div>
+      </div>
+      </div>
     </>
   );
 };

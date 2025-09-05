@@ -47,7 +47,7 @@ export default function MobileMenu({ open, onClose, nav }) {
         <header className={`flex-shrink-0 flex items-center justify-between border-b-5 border-[#031E41] p-[clamp(1.75rem,4.4vw,1.65rem)]`}>
           <h2
             id="menu-heading"
-            className={`${montserrat.className} font-bold text-[#16469D] text-[clamp(1.1rem,3.6vw,1.35rem)]`}
+            className={`${montserrat.className} font-bold text-[#16469D] text-[clamp(0.9rem,1.4vw,1.45rem)]`}
           >
             MENU
           </h2>
@@ -72,7 +72,7 @@ export default function MobileMenu({ open, onClose, nav }) {
                   href={item.href}
                   onClick={onClose}
                   className={`${montserrat.className} block font-bold text-[#16469D] hover:bg-gray-300/50 rounded-lg transition-colors duration-200
-                              text-[clamp(1.1rem,3.6vw,1.35rem)]
+                              text-[clamp(0.9rem,1.4vw,1.45rem)]
                               py-[clamp(0.6rem,2.1vw,0.8rem)]`}
                 >
                   {item.label}
@@ -84,7 +84,7 @@ export default function MobileMenu({ open, onClose, nav }) {
 
         {/* FOOTER: Calibrated for smaller text. */}
         <footer className={`flex-shrink-0 p-[clamp(1.25rem,4.4vw,1.65rem)] border-t-1 border-black`}>
-          <div className={`${montserrat.className} font-light text-[#16469D] text-[clamp(0.7rem,2.5vw,0.85rem)] space-y-1`}>
+          <div className={`${montserrat.className} font-light text-[#16469D] text-[clamp(0.9rem,1.4vw,1.45rem)] space-y-1`}>
             <a href="tel:305-333-2417" className="block hover:underline">Phone: (305) 333-2417</a>
             <a href="mailto:info@apmrestaurantgroup.com" className="block hover:underline">Email: info@apmrestaurantgroup.com</a>
           </div>

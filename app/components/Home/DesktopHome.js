@@ -1,33 +1,73 @@
 // app/components/Home/DesktopHome.js
 
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 
 const slideshowImages = [
   {
     id: 1,
-    src: '/midoriebg.webp',
+    src: '/gallery/image-104.JPG',
     alt: 'Wabi Sabi Dining Room Project',
   },
   {
     id: 2,
-    src: '/hayabgdesk.webp',
+    src: '/gallery/image-48.JPG',
     alt: 'Modern Living Area Project',
   },
   {
     id: 3,
-    src: '/ogawabg.webp',
+    src: '/gallery/image-44.JPG',
     alt: 'Minimalist Interior Project',
   },
   {
     id: 4,
-    src: '/masabg.webp',
+    src: '/gallery/image-107.jpg',
     alt: 'Commercial Space Project',
   },
   {
     id: 5,
-    src: '/kuribg.webp',
+    src: '/gallery/image-112.jpg',
+    alt: 'Exterior Architecture Project',
+  },
+  {
+    id: 6,
+    src: '/gallery/image-25.jpg',
+    alt: 'Exterior Architecture Project',
+  },
+  {
+    id: 13,
+    src: '/gallery/image-28.jpg',
+    alt: 'Exterior Architecture Project',
+  },
+  {
+    id: 7,
+    src: '/gallery/image-94.JPG',
+    alt: 'Exterior Architecture Project',
+  },
+  {
+    id: 8,
+    src: '/gallery/image-111.jpg',
+    alt: 'Exterior Architecture Project',
+  },
+  {
+    id: 9,
+    src: '/gallery/image-78.jpg',
+    alt: 'Exterior Architecture Project',
+  },
+  {
+    id: 10,
+    src: '/gallery/image-127.jpg',
+    alt: 'Exterior Architecture Project',
+  },
+    {
+    id: 11,
+    src: '/gallery/image-30.JPG',
+    alt: 'Exterior Architecture Project',
+  },
+  {
+    id: 12,
+    src: '/gallery/image-90.jpg',
     alt: 'Exterior Architecture Project',
   },
 ];
@@ -35,45 +75,37 @@ const slideshowImages = [
 export default function DesktopHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Memoize slideshow length to prevent unnecessary recalculations
+  const slideshowLength = useMemo(() => slideshowImages.length, []);
+
+  // Memoized navigation functions to prevent unnecessary re-renders
+  const goToSlide = useCallback((index) => {
+    setCurrentSlide(index);
+  }, []);
+
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % slideshowLength);
+  }, [slideshowLength]);
+
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + slideshowLength) % slideshowLength);
+  }, [slideshowLength]);
+
   // Auto-advance slideshow
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
-    }, 4000);
+      setCurrentSlide((prev) => (prev + 1) % slideshowLength);
+    }, 5000); // Increased from 2000ms to 5000ms for better performance
 
     return () => clearInterval(timer);
-  }, []);
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slideshowImages.length) % slideshowImages.length);
-  };
+  }, [slideshowLength]);
 
   return (
-    <div className="bg-black h-screen relative overflow-hidden">
-      <div className="h-[45%] bg-[#16469D]"></div>
-      
-      {/* Slideshow Container - Centered in the middle section */}
-      <div 
-        className="absolute"
-        style={{
-        width: '90vw',
-        height: '60vh',
-          left: '50%',
-          top: '60vh',
-          transform: 'translate(-50%, -50%)',
-          background: 'linear-gradient(0deg, rgba(255, 0, 0, 0.20) 0%, rgba(255, 0, 0, 0.20) 100%), #D9D9D9'
-        }}
-      >
+    <div className="bg-black min-h-screen relative pt-[clamp(205px,14.48vw,278px)]">
+      {/* Slideshow Container - Full viewport */}
+      <div className="w-full h-screen relative">
         {/* Slideshow Images */}
-        <div className="relative w-full h-full overflow-hidden">
+        <div className="relative w-full h-screen overflow-hidden rounded-2xl">
           {slideshowImages.map((image, index) => (
             <div
               key={image.id}
@@ -85,7 +117,7 @@ export default function DesktopHome() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority={index === 0}
               />
             </div>

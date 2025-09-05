@@ -243,7 +243,7 @@ export default function PressPage() {
     </div>
       <header className="w-full bg-white py-2 font-montserrat mt-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-[clamp(1.4rem,2.2vw,2.625rem)] font-bold text-gray-900">
+          <h1 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-bold text-gray-900">
             Press
           </h1>
           <hr className="mt-12 w-full max-w-5xl mx-auto border-t-1 border-[#16469D]" />
