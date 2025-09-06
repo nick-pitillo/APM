@@ -53,7 +53,7 @@ export default function CareersPage() {
       </div>
     </section>
     </div>
-    <section className="w-full bg-white py-2 px-8 sm:px-5 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+    <section className="w-full bg-white py-2 px-2 sm:px-5 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
       
       {/* 
         Inner Blue Placeholder Block:

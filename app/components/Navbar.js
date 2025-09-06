@@ -14,6 +14,7 @@ export const DEFAULT_NAV = [
   { label: "PRESS", href: "/press" },
   { label: "CAREER", href: "/career" },
   { label: "CONTACT", href: "/contact" },
+  { label: "PHILANTHROPY", href: "/philanthropy" },
 ];
 
 export default function Navbar({
