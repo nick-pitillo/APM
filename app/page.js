@@ -11,7 +11,7 @@ const DesktopHome = dynamic(() => import("./components/Home/DesktopHome"));
 export default function Page() {
   return (
     <>
-      <main>
+      <main className="bg-[#16469D]">
 
 
         

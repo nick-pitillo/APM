@@ -1,5 +1,6 @@
 // components/FounderHero.jsx
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FounderHero() {
   return (
@@ -54,7 +55,7 @@ export default function FounderHero() {
 
             {/* Icon Image - Bottom Right */}
             <div className="mt-5 flex justify-center lg:justify-end lg:absolute lg:bottom-0 lg:right-10 mb-2 lg:mb-8">
-              <div className="relative w-32 h-32 lg:w-42 lg:h-42">
+              <Link href="https://www.maff.go.jp/e/policies/market/attach/pdf/ambassa-17.pdf" className="relative w-32 h-32 lg:w-42 lg:h-42 cursor-pointer">
                 <Image
                   src="/Japan.webp"
                   alt="APM Icon"
@@ -62,7 +63,7 @@ export default function FounderHero() {
                   sizes="128px"
                   className="object-contain"
                 />
-              </div>
+              </Link>
             </div>
 
 {/* Badges */}{/* 

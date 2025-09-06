@@ -12,13 +12,13 @@ const restaurantData = [
     websiteUrl: "https://www.midoriemiami.com",
     locations: "79th St, Coconut Grove, W Palm Beach, SoBe",
     mainImage: {
-      src: "/midorieres.webp",
+      src: "/imgs/midorieres.webp",
       alt: "Midorie Restaurant",
       width: 831,
       height: 624,
     },
     logo: {
-      src: "/colored/logodMG_7051.webp",
+      src: "/colored/midorie.webp",
       alt: "Midorie Logo",
       width: 800,
       height: 800,
@@ -34,7 +34,7 @@ const restaurantData = [
       height: 2000,
     },
     logo: {
-      src: "/colored/logodMG_7053.webp",
+      src: "/colored/ogawa.webp",
       alt: "Ogawa Logo",
       width: 800,
       height: 800,
@@ -50,7 +50,7 @@ const restaurantData = [
       height: 624,
     },
     logo: {
-      src: "/colored/logodMG_7050.webp",
+      src: "/colored/hiyakawa.webp",
       alt: "Hiyakawa Logo",
       width: 300,
       height: 300,

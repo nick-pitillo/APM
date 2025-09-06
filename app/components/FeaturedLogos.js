@@ -6,12 +6,12 @@ import Image from "next/image";
 
 // --- LOGO DATA (kept exactly as provided) ---
 const LOGOS = [
- { id: 1, src: "/brand/l (1).webp",  alt: "Partner Logo 1", width: 328, height: 42  },
- { id: 2, src: "/brand/l (2).webp", alt: "Partner Logo 2", width: 183, height: 183 },
- { id: 3, src: "/brand/l (3).webp", alt: "Partner Logo 3", width: 206, height: 161 },
- { id: 4, src: "/brand/l (4).webp", alt: "Partner Logo 4", width: 163, height: 163 },
- { id: 5, src: "/brand/l (1).png",  alt: "Partner Logo 5", width: 348, height: 73  },
- { id: 6, src: "/brand/l (1).webp", alt: "Partner Logo 2", width: 183, height: 183 },
+ { id: 1, src: "/brand/hiyakawa.webp",  alt: "Partner Logo 1", width: 328, height: 42  },
+ { id: 2, src: "/brand/kurikuri.webp", alt: "Partner Logo 2", width: 183, height: 183 },
+ { id: 3, src: "/brand/masayuki.webp", alt: "Partner Logo 3", width: 206, height: 161 },
+ { id: 4, src: "/brand/ogawa.webp", alt: "Partner Logo 4", width: 163, height: 163 },
+ { id: 5, src: "/brand/midorie.png",  alt: "Partner Logo 5", width: 348, height: 73  },
+ { id: 6, src: "/brand/kurikuri.webp", alt: "Partner Logo 2", width: 183, height: 183 },
 ];
 
 

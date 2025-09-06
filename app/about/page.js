@@ -252,17 +252,18 @@ const Page = () => {
 
         <p className="mt-5 text-center max-w-[100rem] text-white text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed">
           Founder Alvaro Perez Miranda curates accomplished and emerging Japanese
-          artists. Visit the gallery next to Midorie 79 or on Instagram{" "}
+          artists. Visit the gallery next to Midorie 79 or on Instagram
+        </p>
+        <div className="text-center mt-2">
           <a
             href="https://instagram.com/blackshipmoment"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
+            className="underline text-white text-[clamp(0.9rem,1.4vw,1.45rem)] font-light"
           >
             @blackshipmoment
           </a>
-          .
-        </p>
+        </div>
       </div>
     </section>
     </div>

@@ -13,6 +13,8 @@ import FourthPartner from '../components/FourthPartner';
 import PhilVision from '../components/PhilVision';
 import PhilResult from '../components/PhilResult';
 import PhilLast from '../components/PhilLast';
+import PhilGrid from '../components/PhilGrid';
+import ThirdPhil from '../components/ThirdPhil';
 const PRESS = [
   {
     id: "michelin-ogawa",
@@ -82,7 +84,7 @@ const Page = () => {
       <div className="md:hidden h-9 sm:h-10 md:h-10 lg:h-10"></div>
       
       <div className="px-2 sm:px-2 lg:px-2">
-        <section className="rounded-2xl w-full flex justify-center items-center bg-[#16469D] py-9 md:py-12 lg:py-12  xl:py-18 ">
+        <section className="rounded-2xl w-full flex justify-center items-center bg-[#16469D] py-9 md:py-12 lg:py-12 xl:py-8">
           <div
             className="
               container mx-auto
@@ -94,10 +96,10 @@ const Page = () => {
             "
           >
             {/* Headline and Subheading */}
-            <h1 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white mb-4 max-w-[950px] mx-auto">
+            <h1 className="text-[clamp(1.2rem,2.2vw,2.5rem)] font-medium text-white mb-6 max-w-[950px] mx-auto leading-tight">
               Jóvenes Barberos de La Vega: From Dream to Reality
             </h1>
-            <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-white leading-relaxed max-w-[950px] mx-auto">
+            <p className="text-[clamp(1rem,1.6vw,1.8rem)] font-light text-white leading-relaxed max-w-[950px] mx-auto">
               How mentorship, education, and determination turned a vision into a thriving barbershop.
             </p>
           </div>
@@ -107,15 +109,29 @@ const Page = () => {
       <VideoPhil />
       <VideoPhilDesktop />
 
-     
+     <PhilGrid />
 
-      {/* Desktop-only */}
-      <div className="px-2 sm:px-2 lg:px-2">
-        <section className="rounded-2xl  px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 w-full bg-[#16469D] flex justify-center items-center py-11 md:py-12 lg:py-5  xl:py-7 ">
+      {/* Mobile: Cultivating Prosperity - Desktop: Where the Journey Began */}
+      <div className="px-2 sm:px-2 lg:px-2 block md:hidden lg:hidden xl:hidden">
+        <section className="rounded-2xl px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 w-full bg-[#16469D] flex justify-center items-center py-11 md:py-12 lg:py-5 xl:py-7 ">
           <div className="w-full max-w-[917px] px-4 flex justify-center items-center">
             <div className="w-full text-white text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed text-center">
-              <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white mb-6">Where the Journey Began</h2>
+              <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white mb-6">Cultivating Prosperity</h2>
               <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-white leading-relaxed">
+                Álvaro met motivated young men during his Caracas book tour—it sparked a mission of mentorship and transformation.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Desktop: Where the Journey Began */}
+      <div className="px-2 sm:px-2 lg:px-2 hidden md:block lg:block xl:block">
+        <section className="rounded-2xl mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 w-full bg-[#16469D] flex justify-center items-center py-11 md:py-12 lg:py-12 xl:py-12">
+          <div className="w-full max-w-[1200px] px-4 sm:px-6 lg:px-8 flex justify-center items-center">
+            <div className="w-full text-white font-montserrat text-center">
+              <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white mb-6">Where the Journey Began</h2>
+              <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-white leading-relaxed max-w-[950px] mx-auto">
                 In 2023, during a book tour stop in El barrio de La Vega in Caracas, Álvaro Pérez Miranda met a community leader and a group of young men, ages 18–22, who dreamed of becoming barbers. Their ambition sparked a vision for mentorship and change.
               </p>
             </div>
@@ -125,194 +141,283 @@ const Page = () => {
 
       <PhilVision />
 
+      {/* Mentorship Ethos - Pull Quote Section */}
       <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
-        <section className="rounded-2xl  w-full flex justify-center items-center bg-[#16469D] py-6 md:py-14 lg:py-14  xl:py-14">
-          <div
-            className="
-              container mx-auto
-              max-w-[1200px]
-              px-4 sm:px-6 lg:px-8
-              font-montserrat
-              text-center
-            "
-          >
+        <section className="rounded-2xl w-full bg-white font-montserrat py-10 md:py-16 lg:py-16 xl:py-16">
+          <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 text-center">
+            {/* Pull Quote */}
+            <blockquote className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black leading-tight mb-8 max-w-[900px] mx-auto italic">
+              &ldquo;Give a man a fish and you feed him for a day. Teach him how to fish and you feed him for a lifetime.&rdquo;
+            </blockquote>
+            
+            {/* Supporting Copy */}
+            <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-gray-700 leading-relaxed max-w-[800px] mx-auto">
+              This ancient wisdom guides Álvaro&apos;s commitment to forge lasting outcomes through education—not handouts. True change comes through empowerment, skills, and the confidence to build one&apos;s own future.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div className="hidden md:block lg:block xl:block">
+<ThirdPhil />
+</div>
+      {/* Transformation Section - Mobile */}
+      <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 block md:hidden lg:hidden xl:hidden">
+        <section className="rounded-2xl w-full flex justify-center items-center bg-[#16469D] py-8 md:py-14 lg:py-14 xl:py-14">
+          <div className="container mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 font-montserrat text-center">
             {/* Title */}
-            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white">
+            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white mb-6">
               From Students to Entrepreneurs
             </h2>
 
             {/* Description */}
-            <p className="mt-6 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-white leading-relaxed max-w-[900px] mx-auto">
+            <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-white leading-relaxed max-w-[900px] mx-auto">
               Over the past year, the group trained not only in barbering, but also in accounting, management, and entrepreneurship. They learned what it takes to cut hair — and to run a business.
             </p>
           </div>
         </section>
       </div>
 
+      {/* Transformation Section - Desktop */}
+      <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 hidden md:block lg:block xl:block">
+        <section className="rounded-2xl w-full flex justify-center items-center bg-[#16469D] py-12 md:py-16 lg:py-20 xl:py-24">
+          <div className="container mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 font-montserrat text-center">
+            {/* Title */}
+            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white mb-6">
+              From Students to Entrepreneurs
+            </h2>
+
+            {/* Description */}
+            <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-white leading-relaxed max-w-[950px] mx-auto mb-6">
+              Over the past year, the group trained not only in barbering, but also in accounting, management, and entrepreneurship. They learned what it takes to cut hair — and to run a business.
+            </p>
+            
+            {/* Additional context for desktop */}
+            <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-white/90 leading-relaxed max-w-[900px] mx-auto">
+              This comprehensive education program equipped them with both technical skills and business acumen, preparing them not just to work, but to lead and create opportunities for others in their community.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      {/* Achievement Section - A Dream Realized */}
+      <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+        <section className="rounded-2xl w-full bg-white font-montserrat py-10 md:py-16 lg:py-16 xl:py-16">
+          <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 text-center">
+            {/* Title */}
+            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black mb-6">A Dream Realized</h2>
+            
+            {/* Description */}
+            <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-gray-700 leading-relaxed max-w-[950px] mx-auto mb-8">
+              In August 2024, the dream became reality. Jóvenes Barberos de La Vega opened its doors as a community milestone, representing far more than a business—it&apos;s a symbol of what&apos;s possible when education meets opportunity.
+            </p>
+
+            {/* Impact Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-[900px] mx-auto">
+              <div className="text-center">
+                <div className="text-[clamp(2rem,3vw,3.5rem)] font-semibold text-[#16469D] mb-2">5</div>
+                <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black">Young men trained in barbering and business</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-[clamp(2rem,3vw,3.5rem)] font-semibold text-[#16469D] mb-2">100+</div>
+                <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black">Hours of business education completed</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-[clamp(2rem,3vw,3.5rem)] font-semibold text-[#16469D] mb-2">1st</div>
+                <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black">Community-owned barbershop in La Vega</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
      <PhilResult />
       
-      <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
-        <section className="rounded-2xl w-full bg-[#16469D] font-montserrat py-7 px-6 md:px-12 lg:py-16 xl:py-16">
-          <div className="mx-auto max-w-[1800px] text-white">
+      {/* Looking Forward - Mobile */}
+      <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 block md:hidden lg:hidden xl:hidden">
+        <section className="rounded-2xl w-full bg-[#16469D] font-montserrat py-10 px-6 md:px-12 lg:py-16 xl:py-16">
+          <div className="mx-auto max-w-[1200px] text-white text-center">
             {/* Title */}
-            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium mb-6 text-center">Looking Forward</h2>
+            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium mb-6">Looking Forward</h2>
 
             {/* Quote */}
-            <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed max-w-[1600px] text-center mx-auto">
-              "It is a true honor to witness their growth. This barbershop is only the beginning — a model for the kind of change we can bring to life, one community at a time." — Álvaro Pérez Miranda
+            <blockquote className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed italic mb-4">
+              &ldquo;This barbershop is only the beginning — a model for the kind of change we can bring to life, one community at a time.&rdquo;
+            </blockquote>
+            
+            {/* Attribution */}
+            <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white/90">
+              — Álvaro Pérez Miranda
+            </p>
+          </div>
+        </section>
+      </div>
+
+      {/* Looking Forward - Desktop */}
+      <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 hidden md:block lg:block xl:block">
+        <section className="rounded-2xl w-full bg-[#16469D] font-montserrat py-10 md:py-16 lg:py-16 xl:py-16">
+          <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 text-white text-center">
+            {/* Title */}
+            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium mb-8">Looking Forward</h2>
+
+            {/* Quote */}
+            <blockquote className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed italic mb-6 max-w-[1000px] mx-auto">
+              &ldquo;It is a true honor to witness their growth. This barbershop is only the beginning — a model for the kind of change we can bring to life, one community at a time.&rdquo;
+            </blockquote>
+            
+            {/* Attribution */}
+            <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white/90">
+              — Álvaro Pérez Miranda
             </p>
           </div>
         </section>
       </div>
 
       <PhilLast />
-      
+
+      {/* Mi Camino a Japón Book Section */}
       <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
-        <section className="rounded-2xl w-full bg-[#16469D] font-montserrat  py-10 md:py-23 lg:py-23 xl:py-23 flex justify-center items-center">
-          <div className="w-full flex justify-center items-center">
-            <div className="text-center px-6 md:px-10 max-w-[1569px] mb-2">
-              <h3 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white">
-                Culinary Mentorship Program
-              </h3>
-              <p className="mt-4 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-white">
-                APM Restaurant Group offers a transformative opportunity for a graduating Latinx hospitality or
-                culinary professional: a stage at an APM restaurant and a fully funded study trip to Japan,
-                guided by Alvaro Perez Miranda or a member of senior leadership.
-              </p>
+        <section className="rounded-2xl w-full bg-white font-montserrat py-10 md:py-16 lg:py-16 xl:py-16">
+          <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              
+              {/* Book Image */}
+              <div className="flex justify-center lg:justify-start order-1 lg:order-1">
+                <div className="relative">
+                  <Image
+                    src="/book.jpg"
+                    alt="Mi Camino a Japón book cover"
+                    width={300}
+                    height={400}
+                    className="object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="order-2 lg:order-2 text-center lg:text-left">
+                <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black mb-6">His Story in Print: Mi Camino a Japón</h2>
+                
+                <div className="space-y-6 text-black">
+                  <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed">
+                    A memoir of resilience, cross-cultural discovery, and the hospitality journey that led to becoming Goodwill Ambassador for Japanese Cuisine. Álvaro&apos;s story bridges cultures and communities through personal transformation.
+                  </p>
+                  
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <h3 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black mb-4">Philanthropic Impact</h3>
+                    <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-gray-700 mb-4">
+                      100% of book proceeds support Fe y Alegría, a Jesuit-founded international movement providing quality education to marginalized youth globally across 22 countries.
+                    </p>
+                    
+                    {/* Fe y Alegría Logo placeholder - you'll need to add the actual logo */}
+                    <div className="flex justify-center lg:justify-start mt-4">
+                      <div className="bg-gray-200 px-6 py-3 rounded-md">
+                        <span className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-gray-600">Fe y Alegría</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
       </div>
+      
+      <div className="block md:hidden lg:hidden xl:hidden">
+<ThirdPhil />
+</div>
 
-      <div className="px-2 sm:px-2 lg:px-2"></div>
-      <section className="w-full bg-white font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 px-2">
-        <div className="mx-auto max-w-[110rem] grid grid-cols-1 xl:grid-cols-2 gap-y-1 sm:gap-y-1 md:gap-y-10 lg:gap-y-10 xl:gap-y-10">
-          {/* Image Block (Second on mobile, first on desktop) */}
-          <div className="flex justify-center items-center px-4 sm:px-6 md:px-8 xl:justify-start xl:px-0">
-            <div className="relative w-full max-w-[960px] aspect-[960/553]">
+      {/* Art as Cultural Bridge: Blackship Gallery */}
+      <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+        <section className="rounded-2xl w-full bg-white font-montserrat py-10 md:py-16 lg:py-16 xl:py-16">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            
+            {/* Blackship Logo */}
+            <div className="mb-8">
               <Image
-                src="/cropped.webp"
-                alt="APM Off Site"
-                fill
-                className="object-cover rounded-2xl"
-                sizes="(min-width: 180px) 40vw, 80vw"
+                src="/blackship.webp"
+                alt="Blackship Gallery"
+                width={140}
+                height={70}
+                className="object-contain mx-auto"
               />
             </div>
-          </div>
 
-          {/* Text Block (First on mobile, second on desktop) */}
-          <div className="px-6 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 text-black flex flex-col justify-center sm:px-10 xl:px-12">
-            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium ">APM Off Site</h2>
-            <p className="mt-4 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-snug max-w-[760px] ">
-              Elevate your next event with off-site experiences crafted by APM
-              Restaurant Group. Bespoke options for private dinners, corporate
-              gatherings, and celebrations, including bento boxes and temaki bars.
-            </p>
-            <a
-              href="mailto:info@apmrestaurantgroup.com"
-              className="mt-6 inline-block font-light underline text-[clamp(0.9rem,1.4vw,1.45rem)]"
-            >
-              info@apmrestaurantgroup.com
-            </a>
+            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-black leading-tight mb-6">Art as Cultural Bridge: Blackship Gallery</h2>
+            
+            <div className="space-y-6 text-black max-w-4xl mx-auto">
+              <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed">
+                Through Blackship Gallery, Álvaro expands his mentorship and cultural outreach. The gallery amplifies Japanese artists in Miami, fostering cross-cultural dialogue and supporting emerging talent.
+              </p>
+              
+              <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed">
+                As he stated when named Goodwill Ambassador for Japanese Cuisine, he promotes Japanese culture &ldquo;through my gallery and through my restaurants.&rdquo; This cultural bridge extends the same principles of mentorship and opportunity that drive the Jóvenes Barberos project.
+              </p>
+              
+              <div className="pt-6">
+                <a
+                  href="https://instagram.com/blackshipmoment"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-[#16469D] hover:text-black transition-colors"
+                >
+                  Follow @blackshipmoment
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
-      </section>
-    
-      <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
-        <section className="rounded-2xl w-full bg-[#16469D] font-montserrat py-13 md:py-24 lg:py-24 xl:py-24 ">
-          <div className="mx-auto max-w-[1800px] px-6 md:px-10">
-            <h2 className="text-white text-center text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium">Blackship Gallery</h2>
-
-            <p className="mt-5 text-center max-w-[100rem] text-white text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-relaxed">
-              Founder Alvaro Perez Miranda curates accomplished and emerging Japanese
-              artists. Visit the gallery next to Midorie 79 or on Instagram{" "}
-              <a
-                href="https://instagram.com/blackshipmoment"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                @blackshipmoment
-              </a>
-              .
-            </p>
-          </div>
         </section>
       </div>
 
-      <section className="w-full bg-white font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
-        <div className="mx-auto max-w-[1800px] px-6 md:px-10">
-          <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] text-center font-medium text-black">Careers</h2>
-
-          <div className="mt-4 space-y-2 text-[clamp(0.9rem,1.4vw,1.45rem)] leading-[1.6] text-black text-center">
-            <p className="font-light">Join the APM Family</p>
-
-            <p>
-              <span className="font-medium">Growth &amp; Development</span>
-              <span className="font-light"> — Unique opportunities across our concepts with clear paths for advancement.</span>
+      {/* Call to Action Section */}
+      <div className="px-2 sm:px-2 lg:px-2 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 mb-2 sm:mb-10 md:mb-10 lg:mb-10 xl:mb-10">
+        <section className="rounded-2xl w-full bg-[#16469D] font-montserrat py-10 md:py-16 lg:py-16 xl:py-16">
+          <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 text-center">
+            
+            {/* Mobile Heading */}
+            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white mb-6 block md:hidden">
+              Support Future Projects
+            </h2>
+            
+            {/* Desktop Heading */}
+            <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-white mb-6 hidden md:block">
+              Be Part of What&apos;s Next
+            </h2>
+            
+            <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-white leading-relaxed max-w-[900px] mx-auto mb-8">
+              The Jóvenes Barberos project is just the beginning. Join us in creating more opportunities for mentorship, education, and community transformation across Latin America.
             </p>
 
-            <p>
-              <span className="font-medium">Immersive Training</span>
-              <span className="font-light"> — Annual all-expenses-paid R&amp;D trip to Japan for select team members and ongoing training.</span>
-            </p>
-
-            <p>
-              <span className="font-medium">Care &amp; Benefits</span>
-              <span className="font-light"> — Limited hours and seating for balance, paid vacation, healthcare, and family meal.</span>
-            </p>
-
-            <p className="pt-2">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-[600px] mx-auto">
               <a
-                href="mailto:careers@apmrestaurantgroup.com"
-                className="text-[clamp(0.9rem,1.4vw,1.45rem)] underline font-light"
+                href="#"
+                className="w-full sm:w-auto bg-white text-[#16469D] px-8 py-4 rounded-lg text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium hover:bg-gray-100 transition-colors text-center"
               >
-                careers@apmrestaurantgroup.com
+                Culinary Mentorship Program
               </a>
-            </p>
+              
+              <a
+                href="#"
+                className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium hover:bg-white hover:text-[#16469D] transition-colors text-center"
+              >
+                Stay Connected
+              </a>
+            </div>
+            
           </div>
-        </div>
-      </section>
-
-      <section className="w-full font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-22 xl:mt-22">
-        {/* Aspect-ratio container: mobile -> desktop */}
-        <div className="relative w-full aspect-[3240/2148] md:aspect-[4863/2154]">
-          {/* Background image */}
-          <Image
-            src="/about/image 32.webp"
-            alt="Explore opportunities at APM Restaurant Group"
-            fill
-            priority
-            className="object-cover rounded-2xl px-2"   // fill the box, no distortion
-            sizes="(min-width: 1024px) 100vw, 100vw"
-          />
-
-          {/* CTA button (bottom-centered) */}
-          <div className="rounded-2xl absolute inset-0 flex items-end justify-center pb-10 sm:pb-14 md:pb-20">
-            <a
-              href="mailto:careers@apmrestaurantgroup.com"
-              className="rounded-2xl grid place-items-center bg-[#16469D] text-white shadow-sm
-                         focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80
-                         w-[clamp(16rem,22vw,22rem)] h-[clamp(3.25rem,4.5vw,4rem)] text-[clamp(0.9rem,1.4vw,1.45rem)]"
-            >
-              Explore Opportunities
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full bg-white font-montserrat py-10 mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 mb-2 sm:mb-10 md:mb-10 lg:mb:10 xl:mb-10">
-        <div className="mx-auto max-w-[1800px] px-4 sm:px-6 md:px-10">
-          <h2 className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-medium text-center text-black">
-            Gift Cards
-          </h2>
-
-          <p className="mt-6 mb-8 text-[clamp(0.9rem,1.4vw,1.45rem)] font-light text-center text-black leading-relaxed max-w-[1620px] px-8">
-            APM Restaurant Group Gift Cards are the perfect gift for discerning palates.
-            <br></br> Purchase at our locations. Online purchasing is coming soon.
-          </p>
-        </div>
-      </section>
+        </section>
+      </div>
+   
     </>
   );
 };

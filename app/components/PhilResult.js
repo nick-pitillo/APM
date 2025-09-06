@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PartnerSec() {
   return (
-    <section className="w-full bg-white font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+    <section className="w-full bg-white font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 block md:hidden lg:hidden xl:hidden">
       <div className="mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-1 lg:justify-center lg:max-w-4xl lg:mx-auto gap-8 lg:gap-10">
           {/* RIGHT: Image (order-last on large screens) */}

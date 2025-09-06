@@ -5,7 +5,7 @@ export default function VideoPhilDesktop() {
   return (
     <section className="w-full bg-white font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 hidden md:block lg:block xl:block">
       <div className="mx-auto max-w-[1800px] px-3 sm:px-4 lg:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4">
           {/* LEFT: Video */}
           <div className="relative w-full">
             {/* preserve ~974x1130 ratio */}

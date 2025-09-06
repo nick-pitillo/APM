@@ -138,7 +138,7 @@ export default function DesktopHome() {
   }, [slideshowLength]);
 
   return (
-    <div className="bg-black h-full relative">
+    <div className="bg-[#16469D] h-full relative">
       {/* Navbar Spacer - Creates natural document flow */}
       <div className="h-[275px]"></div>
       

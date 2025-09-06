@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PartnerSec() {
   return (
-    <section className="w-full bg-white font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20">
+    <section className="w-full bg-white font-montserrat mt-3 sm:mt-4 md:mt-4 lg:mt-20 xl:mt-20 block md:hidden lg:hidden xl:hidden">
       <div className="mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-1 lg:justify-center lg:max-w-4xl lg:mx-auto gap-8 lg:gap-10">
           {/* RIGHT: Image (order-last on large screens) */}
@@ -34,28 +34,18 @@ export default function PartnerSec() {
             {/* Pull Quote */}
             <div className="mt-8 p-6 border-l-4 border-gray-300 bg-gray-50 rounded-r-lg">
               <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-normal text-black italic leading-snug">
-                "Give a man a fish and you feed him for a day. Teach him how to fish and you feed him for a lifetime."
+                &ldquo;Give a man a fish and you feed him for a day. Teach him how to fish and you feed him for a lifetime.&rdquo;
               </p>
             </div>
 
             <div className="mt-8 space-y-6 text-black flex-1">
               <p className="text-[clamp(0.9rem,1.4vw,1.45rem)] font-light leading-snug">
-                Álvaro's goal was not to simply give resources, but to empower these young men with lasting skills. Through mentorship, discipline, and education, they began to transform their dream into something real.
+                Álvaro&apos;s goal was not to simply give resources, but to empower these young men with lasting skills. Through mentorship, discipline, and education, they began to transform their dream into something real.
               </p>
             </div>
 
             {/* Bottom Left Images */}
-            <div className="flex items-end justify-center md:justify-start lg:justify-center gap-4 mt-5 mb-5">
-              <div className="relative w-40 h-32">
-                <Image
-                  src="/fey.png"
-                  alt="Michelin Star"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-             
-            </div>
+          
           </div>
         </div>
       </div>

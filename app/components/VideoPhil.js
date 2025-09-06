@@ -23,7 +23,7 @@ export default function FounderHero() {
             <div className="absolute inset-0 flex items-end mb-20 justify-center rounded-2xl">
               <div className="text-center text-white px-4">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 drop-shadow-lg">
-                  Giving Back <br></br> Cultivating Culture
+                Cultivating Propsperity 
                 </h2>
                
               </div>

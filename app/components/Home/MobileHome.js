@@ -131,7 +131,7 @@ export default function MobileHome() {
   }, [slideshowLength]);
 
   return (
-    <div className="bg-black h-screen relative">
+    <div className="bg-[#16469D] h-screen relative">
       {/* Navbar Spacer - Much smaller for mobile */}
       <div className="h-[80px]"></div>
       

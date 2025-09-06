@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const PEOPLE = [
   {
-    name: "Miguelangel W.",
+    name: "Miguelangel Weill",
     role: "Manager",
     quote:
   "Being part of the APM group feels like family. We share a love for Japanese culture and embody Omotenashi, Sensai, and Komakai — creating lasting memories for our guests and ourselves.",
@@ -11,7 +11,7 @@ const PEOPLE = [
     alt: "Chef portrait",
   },
   {
-    name: "Lizette L.",
+    name: "Lizette Locay",
     role: "General Manager",
     quote:
     "Even without raw talent, this group stands among the industry’s best. Their relentless pursuit of excellence inspires me to keep learning, growing, and never settling.",
@@ -20,8 +20,8 @@ const PEOPLE = [
   },
   
   {
-    name: "Jamie J.",
-    role: "Chef de Cuisine, Hiyakawa",
+    name: "Jamie Liu",
+    role: "Chef / Hiyakawa",
     quote:
     "I was drawn to the authenticity of the cuisine, but fell in love with the authenticity of the people. Across every location, the culture is strong, giving me opportunities to grow, share my passion, and build together as dreamers, builders, and artists.",
   img: "/jamie.webp",
